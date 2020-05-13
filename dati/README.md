@@ -1,2 +1,3 @@
 # template_RTD
-Template 'pulito' da utilizzare per i manuali ReadTheDocs di Gter
+
+Progetto QGIS con i dati dei segnali stradali estratti dal CS della provincia di Piacenza
