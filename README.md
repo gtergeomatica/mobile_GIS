@@ -15,8 +15,7 @@ Testing three different GIS mobile App (Android) strictly related to QGIS (https
 * **Input** https://inputapp.io/
 * **IntraMaps Roam** https://roam-docs.readthedocs.io/en/latest/
 
-To do
-++++++++
+**TO DO**
 
 * investigate and understand how these apps work
 * investigate and understand how these apps interact with QGIS
@@ -26,8 +25,8 @@ To do
   * data preparation (use the dataset in the *data* folder) depending on the requirements of each App
   * connection with an external GPS receiver (if available)
 
-Output
-+++++++
+**OUTPUT**
+
 The final outbut should be a readthedocs manual with these main topics:
 
 * a breef description of the three Apps (add here possible link to useful website related to the Apps)
