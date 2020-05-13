@@ -15,12 +15,14 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import datetime
 
 
 # -- Project information -----------------------------------------------------
 
 project = u'Manuale - TITOLO' ######## DA MODIFICARE ########
-copyright = u'2020, Gter srl'
+now = datetime.datetime.now()
+copyright = u'{}, Gter srl'.format(now.year)
 author = u'Gter srl'
 
 # The short X.Y version
@@ -46,6 +48,10 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx.ext.extlinks',
+    'sphinx.ext.doctest',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.imgmath',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
