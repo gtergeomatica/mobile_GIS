@@ -5,11 +5,11 @@ This repository contains:
 
 * all required files to create an on-line documentation using Read the Docs (for more details about how to manage RTD file see https://github.com/gtergeomatica/template_RTD)
 
-* a sub-folder named **data** which contains sample data to be used for testing the mobile app.
+* a sub-folder named **dati** which contains sample data to be used for testing the mobile app.
 
 TASK
 ------
-Testing three different GIS mobile App (Android) strictly related to QGIS (https://qgis.org/en/site/forusers/download.html --> Apps for mobile and tablet). These App allow to take advantage of the main QGIS functionalities during surveys in the field. These App are:
+Testing three different GIS mobile App (Android) strictly related to QGIS (https://qgis.org/en/site/forusers/download.html --> *Apps for mobile and tablet*). These App allow to take advantage of the main QGIS functionalities during surveys in the field. These App are:
 
 * **Qfield** https://qfield.org/
 * **Input** https://inputapp.io/
@@ -22,7 +22,7 @@ Testing three different GIS mobile App (Android) strictly related to QGIS (https
 * investigate and understand how these apps interact with other GPS receivers
 * installation
 * test the Apps applied to a specific use case (i.e. the survey in the field of the road signs)
-  * data preparation (use the dataset in the *data* folder) depending on the requirements of each App
+  * data preparation (use the dataset in the *dati* folder) depending on the requirements of each App
   * connection with an external GPS receiver (if available)
 
 **OUTPUT**
