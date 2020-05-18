@@ -20,7 +20,7 @@ import datetime
 
 # -- Project information -----------------------------------------------------
 
-project = u'Manuale - TITOLO' ######## DA MODIFICARE ########
+project = u'Manuale - Mobile GIS' ######## DA MODIFICARE ########
 now = datetime.datetime.now()
 copyright = u'{}, Gter srl'.format(now.year)
 author = u'Gter srl'
@@ -92,7 +92,7 @@ pygments_style = None
 #standard readthedocs
 html_theme = "sphinx_rtd_theme"
 
-html_title = ""
+html_title = "Mobile GIS"
 
 html_logo = 'img/logo.png'
 

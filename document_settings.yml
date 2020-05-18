@@ -1,8 +1,8 @@
 ---
 document:
-  description: "Breve descrizione"
-  name: "TITOLO"
+  description: "Une documentazione su tre mobile app da QGIS"
+  name: "Mobile GIS"
   tags:
-    - "tag1"
-    - "tag2"
-    - "tag3"
+    - "Android"
+    - "GIS"
+    - "QGIS"
