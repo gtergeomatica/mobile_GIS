@@ -4,7 +4,7 @@ QField
 Un mobile GIS app con gli obiettivi di accedere ai QGIS strumenti necessari sul terrano.
 
 
-..note:: L'analisi dell'applicazione è realizzato sulla versione 1.5.3 - Piz Palü di QField.
+.. note:: L'analisi dell'applicazione è realizzato sulla versione 1.5.3 - Piz Palü di QField.
 
 
 Installazione
