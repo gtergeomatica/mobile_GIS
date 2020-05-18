@@ -92,7 +92,7 @@ pygments_style = None
 #standard readthedocs
 html_theme = "sphinx_rtd_theme"
 
-html_title = "Mobile GIS"
+html_title = ""
 
 html_logo = 'img/logo.png'
 
