@@ -23,4 +23,4 @@ L'app usa un progetto QGIS esistente. Per vedere ed modificare dati, bisogna di 
 #. Copiare il progetto QField sul mobile
 .... warning:: Il progetto deve essere nel **Internal storage** (non in una scheda SD) per modificare i dati.
 
-Il plugin QFieldSync funziona anche dal progetto QField a un progetto *Desktop*.
+Il plugin QFieldSync funziona anche dal progetto QField al progetto *Desktop*.
