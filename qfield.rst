@@ -15,10 +15,6 @@ Installazione
 QField è un app per Android sistemi. 
 L'ultima versione è disponibile a questo `link <https://github.com/opengisch/QField/releases/>`__ o su Google Play.
 
-
-Funzionamento
------------------------------------
-
 L'app usa un progetto QGIS esistente. Per vedere ed modificare dati, bisogna di:
 
 #. Creare il progetto su QGIS Desktop
