@@ -20,10 +20,19 @@ Funzionamento
 L'app usa un progetto QGIS esistente. Per vedere ed modificare dati, bisogna di:
 
 #. Creare il progetto su QGIS Desktop
-#. Creare o aggiungere i layers
+#. Creare o aggiungere i layers, le style, etc...
 #. Esportare il progetto per l'app con il plugin `QFieldSync <https://plugins.qgis.org/plugins/qfieldsync/>`__
 #. Copiare il progetto QField sul mobile
 
 .. warning:: Il progetto deve essere nel **Internal storage** (non in una scheda SD) per modificare i dati.
 
 Il plugin QFieldSync funziona anche dal progetto QField al progetto *Desktop*.
+
+
+Vantaggi e svantaggi
+-----------------------------------
+
+È possibile di vedere raster layer con QField. Però, preferisce il geopackage agli altri formati di dati affinché
+il caricamento sia più veloce. 
+
+L'app è maneggevole con la possibilità di personnalizzare il modulo degli attributi sul Desktop. 
