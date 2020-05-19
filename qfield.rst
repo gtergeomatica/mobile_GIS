@@ -37,4 +37,4 @@ Vantaggi e svantaggi
 .. hint:: Sceglie il Geopackage agli altri formati come TIF per esempio per il raster affinché il caricamento sia più veloce.
 
 * L'app è maneggevole con la possibilità di personnalizzare il modulo degli attributi sul Desktop. 
-* Durante la modifica, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori "__Infinity__" per X e Y.
+* Durante la modifica, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori *Infinity* per X e Y.
