@@ -1,7 +1,7 @@
-.. image:: img/logo_input.png
-
 Input
 ==================================
+
+.. image:: img/logo_input.png
 
 Un GIS mobile app sviluppato da Mergin
 
@@ -11,7 +11,7 @@ Un GIS mobile app sviluppato da Mergin
 Installazione
 ----------------------------------
 
-* Creare un account su https://public.cloudmergin.com/
+* Creare un account su https://public.cloudmergin.com/ (il account gratuito dà diritto a 100 MB di spazio di archiviazione)
 * Scaricare l'applicazione sul mobile
 * Installare il plugin mergin dal QGIS public repertory su QGIS Desktop
 
@@ -22,3 +22,9 @@ Installazione
 * Mergin va sincronizzando il progetto Mergin con il progetto locale
 * Connettersi all'account sull'applicazione Input
 * Il progetto è disponibile sull'app, nella sezione "I miei progetti"
+
+
+Funzionamento
+-------------------------------------
+
+Input pertanto utiliza il servizio d'archiviazione Mergin per la sincronizzazione dei dati tra QGIS e l'app.
