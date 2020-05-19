@@ -1,4 +1,4 @@
-.. image:: img/qfield_logo.png
+.. image:: img/qfield-logo.png
 
 QField
 ==================================
