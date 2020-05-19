@@ -1,3 +1,5 @@
+.. image:: img/input_logo.png
+
 Input
 ==================================
 

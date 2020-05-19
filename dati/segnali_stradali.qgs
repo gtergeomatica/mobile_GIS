@@ -127,17 +127,17 @@
     </individual-layer-settings>
   </snapping-settings>
   <relations>
-    <relation referencingLayer="dati_segnali_355e178c_1bd4_4cd0_bcc8_89bc0c872f3c" strength="Association" name="relazione" id="1" referencedLayer="dati_segnali_10248cf2_f4fe_4e77_8eea_284481016875">
+    <relation referencingLayer="dati_segnali_355e178c_1bd4_4cd0_bcc8_89bc0c872f3c" strength="Composition" name="relazione_segnali" id="dati_segna_id_grupposegnale_dati_segna_id" referencedLayer="dati_segnali_10248cf2_f4fe_4e77_8eea_284481016875">
       <fieldRef referencingField="id_grupposegnale" referencedField="id"/>
     </relation>
   </relations>
   <mapcanvas name="theMapCanvas" annotationsVisible="1">
     <units>meters</units>
     <extent>
-      <xmin>479707.94269017217447981</xmin>
-      <ymin>4914737.66902661602944136</ymin>
-      <xmax>497167.64620579726761207</xmax>
-      <ymax>4931027.63152661453932524</ymax>
+      <xmin>487523.09342836041469127</xmin>
+      <ymin>4912236.45431204978376627</ymin>
+      <xmax>504982.79694398550782353</xmax>
+      <ymax>4928526.41681204829365015</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -374,7 +374,7 @@
       <flags>
         <Identifiable>1</Identifiable>
         <Removable>1</Removable>
-        <Searchable>1</Searchable>
+        <Searchable>0</Searchable>
       </flags>
       <customproperties>
         <property key="identify/format" value="Undefined"/>
@@ -628,7 +628,7 @@
       </geometryOptions>
       <referencedLayers/>
       <referencingLayers>
-        <relation layerName="dati_segnali r_segnale_fisico" strength="0" dataSource="./dati_segnali.gpkg|layername=r_segnale_fisico" name="relazione" layerId="dati_segnali_355e178c_1bd4_4cd0_bcc8_89bc0c872f3c" id="1" providerKey="ogr">
+        <relation layerName="dati_segnali r_segnale_fisico" strength="1" dataSource="./dati_segnali.gpkg|layername=r_segnale_fisico" name="relazione_segnali" layerId="dati_segnali_355e178c_1bd4_4cd0_bcc8_89bc0c872f3c" id="dati_segna_id_grupposegnale_dati_segna_id" providerKey="ogr">
           <fieldPair referencing="id_grupposegnale" referenced="id"/>
         </relation>
       </referencingLayers>
@@ -2454,6 +2454,15 @@ def my_form_open(dialog, layer, feature):
         <type>dataset</type>
         <title></title>
         <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
         <links/>
         <fees></fees>
         <encoding></encoding>
@@ -2470,7 +2479,15 @@ def my_form_open(dialog, layer, feature):
             <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
-        <extent/>
+        <extent>
+          <spatial minz="0" maxy="0" miny="0" dimensions="2" maxz="0" minx="0" maxx="0" crs=""/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
       </resourceMetadata>
       <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
@@ -2489,330 +2506,2536 @@ def my_form_open(dialog, layer, feature):
       </flags>
       <customproperties>
         <property key="dualview/previewExpressions" value="&quot;denominazione&quot;"/>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
       </customproperties>
       <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
-        <activeChecks type="StringList">
-          <Option type="QString" value=""/>
-        </activeChecks>
+        <activeChecks/>
         <checkConfiguration/>
       </geometryOptions>
       <referencedLayers>
-        <relation layerName="dati_segnali t_grupposegnale" strength="0" dataSource="./dati_segnali.gpkg|layername=t_grupposegnale" name="relazione" layerId="dati_segnali_10248cf2_f4fe_4e77_8eea_284481016875" id="1" providerKey="ogr">
+        <relation layerName="dati_segnali t_grupposegnale" strength="1" dataSource="./dati_segnali.gpkg|layername=t_grupposegnale" name="relazione_segnali" layerId="dati_segnali_10248cf2_f4fe_4e77_8eea_284481016875" id="dati_segna_id_grupposegnale_dati_segna_id" providerKey="ogr">
           <fieldPair referencing="id_grupposegnale" referenced="id"/>
         </relation>
       </referencedLayers>
       <referencingLayers/>
       <fieldConfiguration>
         <field name="fid">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="data_fabbricazione">
-          <editWidget type="">
+          <editWidget type="DateTime">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="allow_null" type="bool" value="true"/>
+                <Option name="calendar_popup" type="bool" value="true"/>
+                <Option name="display_format" type="QString" value="yyyy-MM-dd"/>
+                <Option name="field_format" type="QString" value="yyyy-MM-dd"/>
+                <Option name="field_iso_format" type="bool" value="false"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="data_scadenza">
-          <editWidget type="">
+          <editWidget type="DateTime">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="allow_null" type="bool" value="true"/>
+                <Option name="calendar_popup" type="bool" value="true"/>
+                <Option name="display_format" type="QString" value="yyyy-MM-dd"/>
+                <Option name="field_format" type="QString" value="yyyy-MM-dd"/>
+                <Option name="field_iso_format" type="bool" value="false"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="nm_autorizzazione">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="d_amm_rilasciante">
-          <editWidget type="">
+          <editWidget type="ValueMap">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="map" type="List">
+                  <Option type="Map">
+                    <Option name="Provincia Piacenza" type="QString" value="1"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Altri enti" type="QString" value="2"/>
+                  </Option>
+                </Option>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="d_dimensione">
-          <editWidget type="">
+          <editWidget type="ValueMap">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="map" type="List">
+                  <Option type="Map">
+                    <Option name="Normale" type="QString" value="1"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Grande" type="QString" value="2"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Altro" type="QString" value="3"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ridotto" type="QString" value="4"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Piccolo" type="QString" value="5"/>
+                  </Option>
+                </Option>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="d_materiale">
-          <editWidget type="">
+          <editWidget type="ValueMap">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="map" type="List">
+                  <Option type="Map">
+                    <Option name="Metallo" type="QString" value="1"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Cemento" type="QString" value="2"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Altro" type="QString" value="3"/>
+                  </Option>
+                </Option>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="toponimo">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="d_stato">
-          <editWidget type="">
+          <editWidget type="ValueMap">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="map" type="List">
+                  <Option type="Map">
+                    <Option name="Buono" type="QString" value="0"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Discreto" type="QString" value="1"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Sufficiente" type="QString" value="2"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Scarso" type="QString" value="3"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Da sostituire" type="QString" value="4"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="" type="QString" value=""/>
+                  </Option>
+                </Option>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="fk_foto">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="altezza">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="d_illuminato">
-          <editWidget type="">
+          <editWidget type="CheckBox">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="CheckedState" type="QString" value="1"/>
+                <Option name="UncheckedState" type="QString" value="0"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="d_arch">
-          <editWidget type="">
+          <editWidget type="ValueMap">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="map" type="List">
+                  <Option type="Map">
+                    <Option name="No" type="QString" value="N"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Si" type="QString" value="S"/>
+                  </Option>
+                </Option>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="data_installazione">
-          <editWidget type="">
+          <editWidget type="DateTime">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="allow_null" type="bool" value="true"/>
+                <Option name="calendar_popup" type="bool" value="true"/>
+                <Option name="display_format" type="QString" value="yyyy-MM-dd"/>
+                <Option name="field_format" type="QString" value="yyyy-MM-dd"/>
+                <Option name="field_iso_format" type="bool" value="false"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="data_sostituzione">
-          <editWidget type="">
+          <editWidget type="DateTime">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="allow_null" type="bool" value="true"/>
+                <Option name="calendar_popup" type="bool" value="true"/>
+                <Option name="display_format" type="QString" value="yyyy-MM-dd"/>
+                <Option name="field_format" type="QString" value="yyyy-MM-dd"/>
+                <Option name="field_iso_format" type="bool" value="false"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="data_eliminazione">
-          <editWidget type="">
+          <editWidget type="DateTime">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="allow_null" type="bool" value="true"/>
+                <Option name="calendar_popup" type="bool" value="true"/>
+                <Option name="display_format" type="QString" value="yyyy-MM-dd"/>
+                <Option name="field_format" type="QString" value="yyyy-MM-dd"/>
+                <Option name="field_iso_format" type="bool" value="false"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="data_autorizzazione">
-          <editWidget type="">
+          <editWidget type="DateTime">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="allow_null" type="bool" value="true"/>
+                <Option name="calendar_popup" type="bool" value="true"/>
+                <Option name="display_format" type="QString" value="yyyy-MM-dd"/>
+                <Option name="field_format" type="QString" value="yyyy-MM-dd"/>
+                <Option name="field_iso_format" type="bool" value="false"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="denominazione">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="d_tipo_segnale">
-          <editWidget type="">
+          <editWidget type="ValueMap">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="map" type="List">
+                  <Option type="Map">
+                    <Option name="Segnali di pericolo" type="QString" value="A"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di prescrizione" type="QString" value="B"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di indicazione" type="QString" value="C"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pannelli integrativi" type="QString" value="D"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali complementari" type="QString" value="E"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Lanterne semaforiche" type="QString" value="F"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Altro" type="QString" value="-1"/>
+                  </Option>
+                </Option>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="txtamm_ril">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="d_tipo_classe">
-          <editWidget type="">
+          <editWidget type="ValueMap">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="map" type="List">
+                  <Option type="Map">
+                    <Option name="Classe 1 (normale efficienza)" type="QString" value="1"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Classe 2 (alta efficienza)" type="QString" value="2"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Classe 3" type="QString" value="3"/>
+                  </Option>
+                </Option>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="fk_segnalestradale">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="d_composito">
-          <editWidget type="">
+          <editWidget type="CheckBox">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="CheckedState" type="QString" value="1"/>
+                <Option name="UncheckedState" type="QString" value="0"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="ente_proprietario">
-          <editWidget type="">
+          <editWidget type="ValueMap">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="map" type="List">
+                  <Option type="Map">
+                    <Option name="Amministrazione provinciale" type="QString" value="1"/>
+                  </Option>
+                </Option>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="ordinanza">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="data_ordinanza">
-          <editWidget type="">
+          <editWidget type="DateTime">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="d_ditta_installante">
-          <editWidget type="">
+          <editWidget type="ValueMap">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="map" type="List">
+                  <Option type="Map">
+                    <Option name="A.A.P." type="QString" value="1"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="A.P. PIACENZA" type="QString" value="10"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="MFR" type="QString" value="100"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="MONTIPLAST" type="QString" value="101"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="NEWFAST" type="QString" value="102"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="NIOVA FISE" type="QString" value="103"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="NORD SEGNALI STRADALE" type="QString" value="104"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="NSI" type="QString" value="105"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="NUOVA LAGOPLAST" type="QString" value="106"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="NUOVA OMEGE" type="QString" value="107"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="OGM" type="QString" value="108"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="OLIMPIA SEGNALETICA" type="QString" value="109"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ARPA" type="QString" value="11"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="OM" type="QString" value="110"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="O.M. STRADE" type="QString" value="111"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="OROBICA" type="QString" value="112"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="PEB" type="QString" value="113"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="PGM" type="QString" value="114"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="PINCIARA" type="QString" value="115"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="PRIMA SMALTERIA EMILIANA" type="QString" value="116"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="PROTEX" type="QString" value="117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="PSV" type="QString" value="118"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="PUBBLI DUE" type="QString" value="119"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ASA" type="QString" value="12"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="PUBBLIONDA" type="QString" value="120"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="PUBLISPAZIO" type="QString" value="121"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="RDB" type="QString" value="122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="RIBONI" type="QString" value="123"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="RSI" type="QString" value="124"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="RTP" type="QString" value="125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SADA" type="QString" value="126"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SAIB" type="QString" value="127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SAP" type="QString" value="128"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SAS" type="QString" value="129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ASER" type="QString" value="13"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SASS" type="QString" value="130"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SE PROJECT" type="QString" value="131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEA" type="QString" value="132"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SE.FI" type="QString" value="133"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEFI" type="QString" value="134"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEGNAL ARREDO" type="QString" value="135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEGNAL GEST" type="QString" value="136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEGNAL PRESS" type="QString" value="137"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEGNAL SYSTEM" type="QString" value="138"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEGNAL URBAN" type="QString" value="139"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="AT" type="QString" value="14"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEGNALETICA FIORENTINA" type="QString" value="140"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEGNALETICA OROBICA" type="QString" value="141"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEGNALETICA PAVESE" type="QString" value="142"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEGNALETICA STRADALE" type="QString" value="143"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEGNALGEST" type="QString" value="144"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEGNART" type="QString" value="145"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEI DUE SEI" type="QString" value="146"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEICA" type="QString" value="147"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SELCA" type="QString" value="148"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SENTAL" type="QString" value="149"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ATP" type="QString" value="15"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SEP" type="QString" value="150"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SERENISSIMA" type="QString" value="151"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SE.RIF." type="QString" value="152"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SERIF" type="QString" value="153"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SERVIZI STRADALI E AMMINISTRATIVI" type="QString" value="154"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SESTRA" type="QString" value="155"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SETITAL" type="QString" value="156"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SIAS" type="QString" value="157"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SIGNAL URBIS" type="QString" value="158"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SIGNALARREDO" type="QString" value="159"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="BARTOLOTTI" type="QString" value="16"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SIGNALGEST" type="QString" value="160"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SINS" type="QString" value="161"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SIROL" type="QString" value="162"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SIRTI" type="QString" value="163"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SIS" type="QString" value="164"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SI.SA" type="QString" value="165"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SISA" type="QString" value="166"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SISAS" type="QString" value="167"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SI.SE" type="QString" value="168"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SISE" type="QString" value="169"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="BGM" type="QString" value="17"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SISKA" type="QString" value="170"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SISOV" type="QString" value="171"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SIT" type="QString" value="172"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SS SONGINESI" type="QString" value="173"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SSA" type="QString" value="174"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SSI" type="QString" value="175"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="S.S.S" type="QString" value="176"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="S.S.S." type="QString" value="177"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SSS" type="QString" value="178"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SSSACI" type="QString" value="179"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="BULGARELLI" type="QString" value="18"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SUD SIGNAL" type="QString" value="180"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="SUDMETAL" type="QString" value="181"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="TAMBURINI" type="QString" value="182"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="TEAM SEGNAL" type="QString" value="183"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="TECNO SYSTEM" type="QString" value="184"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="TECNOPUBBLICA" type="QString" value="185"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="TESORO NICOLA" type="QString" value="186"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="T.G. SEGNALETICA" type="QString" value="187"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="TIELLE SEGNALETICA" type="QString" value="188"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="TORO" type="QString" value="189"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="BULGARELLI CHIMICA" type="QString" value="19"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="T.P.S." type="QString" value="190"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="TRAFFIC SYSTEMS" type="QString" value="191"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="TRI VENETA" type="QString" value="192"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="T.S.P." type="QString" value="193"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="VALENTE ROSA" type="QString" value="194"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="VEGA" type="QString" value="195"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="VENETA" type="QString" value="196"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ZEBRA" type="QString" value="197"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="150" type="QString" value="198"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="3G" type="QString" value="199"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ACI" type="QString" value="2"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="BUSANA SEGNALETICA" type="QString" value="20"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="3G DIVISIONE SEGNALETICA" type="QString" value="200"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="A.A.P.1" type="QString" value="201"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ACI1" type="QString" value="202"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="BUSANO" type="QString" value="21"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="BVOI" type="QString" value="22"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CALORE" type="QString" value="23"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CARATONI" type="QString" value="24"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CARLINI SIGNAL" type="QString" value="25"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CARTELLI SEGNALATORI" type="QString" value="26"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CASALMORANO" type="QString" value="27"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CEMPI" type="QString" value="28"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CEMPi" type="QString" value="29"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ACIB" type="QString" value="3"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CEMPI POINT" type="QString" value="30"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CERVINI GIORDANO" type="QString" value="31"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CHIMICA TANDOI" type="QString" value="32"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CIBONI" type="QString" value="33"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CIMS" type="QString" value="34"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CISA" type="QString" value="35"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CITI" type="QString" value="36"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CMEPI" type="QString" value="37"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="C.M.MARCHETTI" type="QString" value="38"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="COLORIFICIO" type="QString" value="39"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ACIS" type="QString" value="4"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="COOP CAM" type="QString" value="40"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CORVED" type="QString" value="41"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="COSEPRIM" type="QString" value="42"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CPCM" type="QString" value="43"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="C.T.I" type="QString" value="44"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="CTI" type="QString" value="45"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="D" type="QString" value="46"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="DE ROYAL" type="QString" value="47"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="DGM" type="QString" value="48"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="DIB" type="QString" value="49"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ACIS " type="QString" value="5"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="DIDI FONTANA" type="QString" value="50"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="DIVISIONE SEGNALETICA" type="QString" value="51"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="EASE" type="QString" value="52"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ECOTRAFFIC" type="QString" value="53"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="E.P.C.M." type="QString" value="54"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ESPOSTI" type="QString" value="55"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ESSEPI" type="QString" value="56"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="EUROSEGNAL" type="QString" value="57"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="FACIT" type="QString" value="58"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="FASE" type="QString" value="59"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ACT" type="QString" value="6"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="FAU" type="QString" value="60"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="FAV" type="QString" value="61"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="FIONE" type="QString" value="62"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="FIPA" type="QString" value="63"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="FI.SME" type="QString" value="64"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="FONTANI " type="QString" value="65"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="FRALASSO" type="QString" value="66"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="GALORE" type="QString" value="67"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="GANELLI" type="QString" value="68"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="GHIGGI ANDREA" type="QString" value="69"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="AGM" type="QString" value="7"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="GIAVARDI" type="QString" value="70"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="GRIGGI ANDREA" type="QString" value="71"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="GTI" type="QString" value="72"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="GUBELA" type="QString" value="73"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ICA" type="QString" value="74"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ICIB" type="QString" value="75"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ICIB BOCCARA" type="QString" value="76"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ICMQ" type="QString" value="77"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="IL SEGNALE" type="QString" value="78"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="IMPRESA LEONE DOMENICO" type="QString" value="79"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ANAS" type="QString" value="8"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="IN.CA." type="QString" value="80"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="INDIC ITALIA" type="QString" value="81"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="INGIARA" type="QString" value="82"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="IP SIGNS" type="QString" value="83"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="IR.SY" type="QString" value="84"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ISOV" type="QString" value="85"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ISTRA" type="QString" value="86"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ISV" type="QString" value="87"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ITS" type="QString" value="88"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="IV.CA" type="QString" value="89"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="ANTINFORTUNISTICA" type="QString" value="9"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="IVCA" type="QString" value="90"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="LA SEMAFORICA" type="QString" value="91"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="LA TECNOPUBBLICA" type="QString" value="92"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="LAGOPLAST" type="QString" value="93"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="LATEC" type="QString" value="94"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="LEONE DOMENICO" type="QString" value="95"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="LINEA 2000" type="QString" value="96"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="LOFARO" type="QString" value="97"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="LOMBARDA " type="QString" value="98"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="MARCHETTI" type="QString" value="99"/>
+                  </Option>
+                </Option>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="fk_ditta_produttrice">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="note">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="id_segnale_fisico">
-          <editWidget type="">
+          <editWidget type="Range">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="id_grupposegnale">
-          <editWidget type="">
+          <editWidget type="RelationReference">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="d_codice_segnale">
-          <editWidget type="">
+          <editWidget type="ValueMap">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="map" type="List">
+                  <Option type="Map">
+                    <Option name="Centro  " type="QString" value="fig_100_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Posta " type="QString" value="fig_101_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Comune " type="QString" value="fig_102_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pronto soccorso " type="QString" value="fig_103_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ospedale " type="QString" value="fig_104_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ambulatorio" type="QString" value="fig_105_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Farmacia " type="QString" value="fig_106_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Telefono " type="QString" value="fig_107_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Informazioni" type="QString" value="fig_108_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Carabinieri " type="QString" value="fig_109_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Croce di S. Andrea " type="QString" value="fig_10a_art_87"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Doppia croce di S. Andrea " type="QString" value="fig_10b_art_87"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Croce di S. Andrea installata verticalmente " type="QString" value="fig_10c_art_87"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Doppia croce di S. Andrea installata verticalmente " type="QString" value="fig_10d_art_87"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Polizia " type="QString" value="fig_110a_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Guardia di finanza " type="QString" value="fig_110b_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Polizia municipale " type="QString" value="fig_111_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Vigili del fuoco " type="QString" value="fig_112_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Frontiera " type="QString" value="fig_113_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Stazione " type="QString" value="fig_114_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Stazione fs " type="QString" value="fig_115_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Aeroporto" type="QString" value="fig_116_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Partenze " type="QString" value="fig_117_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Arrivi " type="QString" value="fig_118_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Porto " type="QString" value="fig_119_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="1 pannello distanziometrico " type="QString" value="fig_11a_art_87"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="2 pannello distanziometrico " type="QString" value="fig_11b_art_87"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="3 pannello distanziometrico " type="QString" value="fig_11c_art_87"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Traghetto " type="QString" value="fig_120_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Aliscafo " type="QString" value="fig_121_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Autostazione " type="QString" value="fig_122_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Eliporto " type="QString" value="fig_123_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Carico e scarico " type="QString" value="fig_124_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Zona pedonale " type="QString" value="fig_125_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Attraversamento pedonale " type="QString" value="fig_126_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Sottopassaggio " type="QString" value="fig_127_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Soprapassaggio " type="QString" value="fig_128_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Rampa " type="QString" value="fig_129_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Attraversamento tramviario" type="QString" value="fig_12_art_88"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Invalido " type="QString" value="fig_130_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Bicicletta " type="QString" value="fig_131_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ciclomotore " type="QString" value="fig_132_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Motociclo " type="QString" value="fig_133_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Motocarrozzetta " type="QString" value="fig_134_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Motocarro " type="QString" value="fig_135_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Auto " type="QString" value="fig_136_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Autocarro " type="QString" value="fig_137_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Autotreno " type="QString" value="fig_138_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Autoarticolato " type="QString" value="fig_139_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Attraversamento pedonale " type="QString" value="fig_13_art_88"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Trasporto container" type="QString" value="fig_140a_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Rimorchio " type="QString" value="fig_140b_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Autobus urbano " type="QString" value="fig_141_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Autobus extraurbano " type="QString" value="fig_142_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Tram " type="QString" value="fig_143_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Metropolitana " type="QString" value="fig_144_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Taxi " type="QString" value="fig_145_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Autocaravan " type="QString" value="fig_146_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Caravan " type="QString" value="fig_147_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Auto+rimorchio " type="QString" value="fig_148_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Auto al seguito " type="QString" value="fig_149_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Attraversamento ciclabile " type="QString" value="fig_14_art_88"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Cuccetta+auto " type="QString" value="fig_150_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Mezzo d´opera" type="QString" value="fig_151_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Scarico" type="QString" value="fig_152_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Autosoccorso " type="QString" value="fig_153_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Sgombraneve " type="QString" value="fig_154_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Spazzatrice " type="QString" value="fig_155_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Trattrice " type="QString" value="fig_156_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Macchina operatrice " type="QString" value="fig_157_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Autocisterna con prodotti contaminanti " type="QString" value="fig_158_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Trasporto esplosivi " type="QString" value="fig_159_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Discesa pericolosa" type="QString" value="fig_15_art_89"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Merci pericolose " type="QString" value="fig_160_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Autostrada " type="QString" value="fig_161_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Inversione di marcia " type="QString" value="fig_162_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Rifornimento " type="QString" value="fig_163_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Benzina verde " type="QString" value="fig_164_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Gpl " type="QString" value="fig_165_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Diesel " type="QString" value="fig_166_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Metano " type="QString" value="fig_167_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Autorimessa " type="QString" value="fig_168_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Riparazione " type="QString" value="fig_169_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Salita ripida " type="QString" value="fig_16_art_89"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Parcheggio" type="QString" value="fig_170_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Parchimetro" type="QString" value="fig_171_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Disco orario" type="QString" value="fig_172_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Albergo o motel" type="QString" value="fig_173_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Bar" type="QString" value="fig_174_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ristorante" type="QString" value="fig_175_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Wc" type="QString" value="fig_176_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Uscita di emergenza" type="QString" value="fig_177_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Estintore " type="QString" value="fig_178_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Impianto di scarico per autocaravan " type="QString" value="fig_179_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Strettoia simmetrica " type="QString" value="fig_17_art_90"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Camping" type="QString" value="fig_180_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pneumatici da neve " type="QString" value="fig_181_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Catene " type="QString" value="fig_182_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Asilo" type="QString" value="fig_183_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Scuola" type="QString" value="fig_184_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Università" type="QString" value="fig_185_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Chiesa " type="QString" value="fig_186_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Cimitero" type="QString" value="fig_187_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Banca" type="QString" value="fig_188_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Tribunale " type="QString" value="fig_189_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Strettoia asimmetrica a sinistra " type="QString" value="fig_18_art_90"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Biblioteca " type="QString" value="fig_190_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Esposizione o fiera" type="QString" value="fig_191_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Industria " type="QString" value="fig_192_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Campo Boario" type="QString" value="fig_193_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Supermercato " type="QString" value="fig_194_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Cinema " type="QString" value="fig_195_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Teatro " type="QString" value="fig_196_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Discoteca " type="QString" value="fig_197_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Parco giochi " type="QString" value="fig_198_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Zoo" type="QString" value="fig_199_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Strettoia asimmetrica a destra " type="QString" value="fig_19_art_90"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Strada deformata " type="QString" value="fig_1_art_85"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Acquario" type="QString" value="fig_200_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Museo " type="QString" value="fig_201_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Terme " type="QString" value="fig_202_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Castello " type="QString" value="fig_203_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Zona archeologica " type="QString" value="fig_204_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Grotte" type="QString" value="fig_205_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Porto turistico " type="QString" value="fig_206_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Escursionisti " type="QString" value="fig_207_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Punto panoramico " type="QString" value="fig_208_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Area picnic" type="QString" value="fig_209_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ponte mobile " type="QString" value="fig_20_art_91"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Mare fiume lago " type="QString" value="fig_210_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pineta" type="QString" value="fig_211_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pineta + mare " type="QString" value="fig_212_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Foresta " type="QString" value="fig_213_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Cascata " type="QString" value="fig_214_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Centro sportivo " type="QString" value="fig_215_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Stadio" type="QString" value="fig_216_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ippodromo " type="QString" value="fig_217_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Velodromo " type="QString" value="fig_218_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Piscina " type="QString" value="fig_219_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Banchina cedevole " type="QString" value="fig_21_art_92"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pallavolo" type="QString" value="fig_220_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pallacanestro " type="QString" value="fig_221_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Tennis " type="QString" value="fig_222_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pattinaggio " type="QString" value="fig_223_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Tiro " type="QString" value="fig_224_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Arco " type="QString" value="fig_225_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Bocce " type="QString" value="fig_226_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Golf " type="QString" value="fig_227_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Scuola di sci " type="QString" value="fig_228_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Funivia " type="QString" value="fig_229_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Strada sdrucciolevole " type="QString" value="fig_22_art_93"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Seggiovia " type="QString" value="fig_230_art_125 "/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Skilift " type="QString" value="fig_231_art_125"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di direzione alto con lanterne semaforiche incorporate " type="QString" value="fig_232_art_126"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preavviso di intersezione urbana " type="QString" value="fig_233_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preavviso di intersezione extraurbana " type="QString" value="fig_234_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di intersezione per diramazione autostrade " type="QString" value="fig_235_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preavviso di intersezioni ravvicinate urbane " type="QString" value="fig_236_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preavviso di intersezioni ravvicinate extraurbane " type="QString" value="fig_237_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preavviso di intersezione urbana rotatoria" type="QString" value="fig_238_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preavviso di intersezione urbana con divieto di transito per una categoria di veicoli su un ramo della intersezione " type="QString" value="fig_239_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Bambini " type="QString" value="fig_23_art_94"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preavviso di intersezione extraurbana con passaggio a livello su un piano dell´intersezione " type="QString" value="fig_240_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preselezione urbano " type="QString" value="fig_241_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preselezione urbano posto sopra la carreggiata " type="QString" value="fig_242_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preselezione extraurbano " type="QString" value="fig_243_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preselezione urbano " type="QString" value="fig_244_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preselezione extraurbano " type="QString" value="fig_245_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di corsia con funzione di preavviso " type="QString" value="fig_246_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di corsia con funzione di preselezione e di direzione " type="QString" value="fig_247_art_127"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di direzione urbano " type="QString" value="fig_248_art_128"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di direzione extraurbano " type="QString" value="fig_249_art_128"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Animali domestici vaganti " type="QString" value="fig_24_art_95"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di corsia con funzione di direzione " type="QString" value="fig_250_art_128"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di corsia con funzione di direzione " type="QString" value="fig_251_art_128"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di corsia con funzione di direzione con modalità per l´utilizzo delle singole corsie " type="QString" value="fig_252_art_128"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Gruppo segnaletico unitario urbano monofilare" type="QString" value="fig_253_art_128"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Gruppo segnaletico unitario extraurbano " type="QString" value="fig_254_art_128 "/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Gruppo segnaletico unitario urbano bifilare " type="QString" value="fig_255_art_128"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di identificazione itinerario internazionale " type="QString" value="fig_256_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di di identificazione autostrada " type="QString" value="fig_257_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di identificazione strada statale " type="QString" value="fig_258_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di identificazione strada provinciale " type="QString" value="fig_259_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Animali selvatici vaganti " type="QString" value="fig_25_art_96"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di identificazione strada comunale " type="QString" value="fig_260_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di progressiva chilometrica " type="QString" value="fig_261_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di progressiva ettometrica " type="QString" value="fig_262_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Progressiva distanziometrica autostradale " type="QString" value="fig_263_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Progressiva distanziometrica autostradale " type="QString" value="fig_264_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Progressiva distanziometrica integrata con segnale di conferma su strade extraurbane " type="QString" value="fig_265_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Progressiva distanziometrica per strada statale " type="QString" value="fig_266_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Progressiva distanziometrica per strada provinciale " type="QString" value="fig_267_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Progressiva distanziometrica strada comunale " type="QString" value="fig_268_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Numero di identificazione autostrada + freccia con funzione di direzione " type="QString" value="fig_269_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Doppio senso di circolazione " type="QString" value="fig_26_art_96"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Numeri di identificazione strada statale + freccia e strada comunale + freccia con funzione di direzione " type="QString" value="fig_270_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Numeri identificazione strada provinciale + freccia con funzioni di direzione " type="QString" value="fig_271_art_129"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di itinerario extraurbano " type="QString" value="fig_272_art_130"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Inizio centro abitato " type="QString" value="fig_273_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine centro abitato " type="QString" value="fig_273f_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine centro abitato " type="QString" value="fig_274_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di inizio e fine regione " type="QString" value="fig_275_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di inizio e fine provincia " type="QString" value="fig_276_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pronto soccorso " type="QString" value="fig_277_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Stazione " type="QString" value="fig_278_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Polizia " type="QString" value="fig_279_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Circolazione rotatoria " type="QString" value="fig_27_art_96"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Carabinieri" type="QString" value="fig_280_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Informazioni " type="QString" value="fig_281_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ospedale " type="QString" value="fig_282_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Comune " type="QString" value="fig_283_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Polizia municipale " type="QString" value="fig_284_art_131"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di conferma autostradale " type="QString" value="fig_285_art_132"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Numero di identificazione autostrada + freccia verticale con funzione di conferma " type="QString" value="fig_286_art_132"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Sbocco su molo o su argine " type="QString" value="fig_28_art_97"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale nome-strada combinato col senso unico e numeri civici " type="QString" value="fig_292_art_133"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Numero civico " type="QString" value="fig_293_art_133"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali turistici e di territorio " type="QString" value="fig_294_art_134"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di localizzazione territoriale " type="QString" value="fig_295_art_134"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di avvio alla zona industriale " type="QString" value="fig_296_art_134"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di direzione per le industrie " type="QString" value="fig_297_art_134"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Preavviso di informazioni turistico alberghiere " type="QString" value="fig_298_art_134"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di informazioni alberghiere " type="QString" value="fig_299_art_134"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Materiale instabile sulla strada " type="QString" value="fig_29_art_98"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Dosso " type="QString" value="fig_2_art_85"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di preavviso alberghiero " type="QString" value="fig_300_art_134"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di direzione alberghiera " type="QString" value="fig_301_art_134"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ospedale " type="QString" value="fig_302_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Attraversamento pedonale " type="QString" value="fig_303_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Scuolabus " type="QString" value="fig_304_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Sos" type="QString" value="fig_305_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Sottopassaggio pedonale " type="QString" value="fig_306_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Soprapassaggio pedonale " type="QString" value="fig_307_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Rampa inclinata pedonale " type="QString" value="fig_308_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Strada senza uscita " type="QString" value="fig_309_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Caduta massi " type="QString" value="fig_30a_art_98"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Caduta massi " type="QString" value="fig_30b_art_98"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Preavviso di strada senza uscita " type="QString" value="fig_310_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Preavviso di strada senza uscita " type="QString" value="fig_311_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Velocità consigliata " type="QString" value="fig_312_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine velocità consigliata " type="QString" value="fig_313_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Strada riservata ai veicoli motore " type="QString" value="fig_314_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine strada riservata ai veicoli motore " type="QString" value="fig_315_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Galleria " type="QString" value="fig_316_art_135 "/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ponte " type="QString" value="fig_317_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Zona residenziale " type="QString" value="fig_318_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine zona industriale " type="QString" value="fig_319_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Semaforo " type="QString" value="fig_31a_art_99"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Semaforo " type="QString" value="fig_31b_art_99"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Area pedonale urbana " type="QString" value="fig_320_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine area pedonale urbana " type="QString" value="fig_321_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Zona traffico limitato " type="QString" value="fig_322a_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine zona traffico limitato " type="QString" value="fig_322b_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Zona velocità limitata" type="QString" value="fig_323a_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine zona velocità limitata" type="QString" value="fig_323b_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Attraversamento ciclabile " type="QString" value="fig_324_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Svolta a sinistra semidiretta " type="QString" value="fig_325_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Svolta sinistra indiretta " type="QString" value="fig_326_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Inversione di marcia " type="QString" value="fig_327_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Piazzola su viabilità ordinaria " type="QString" value="fig_328_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Piazzola + sos autostradale " type="QString" value="fig_329_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Aeromobili " type="QString" value="fig_32_art_100"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transitabilità " type="QString" value="fig_330_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Via libera " type="QString" value="fig_331_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Via libera con obbligo di catene o pneumatici da neve " type="QString" value="fig_332_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Via libera con le catene o pneumatici da neve raccomandati " type="QString" value="fig_333_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Strada intransitabile " type="QString" value="fig_334_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Tratto terminale della strada o passo chiuso " type="QString" value="fig_335_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Tratto terminale della strada o passo chiuso " type="QString" value="fig_336_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Uso corsie " type="QString" value="fig_337_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Uso corsie " type="QString" value="fig_338_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Uso corsie " type="QString" value="fig_339_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Forte vento laterale " type="QString" value="fig_33_art_101"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Uso corsie " type="QString" value="fig_340_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Variazione corsie disponibili " type="QString" value="fig_341_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Variazione corsie disponibili " type="QString" value="fig_342_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Variazione corsie disponibili " type="QString" value="fig_343_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Variazione corsie disponibili " type="QString" value="fig_344_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Inizio autostrada " type="QString" value="fig_345_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine autostrada " type="QString" value="fig_346_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Preavviso di inizio autostrada preavviso di inizio strada extraurbana principale " type="QString" value="fig_347_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Senso unico parallelo " type="QString" value="fig_348_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Senso unico frontale " type="QString" value="fig_349_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pericolo di incendio" type="QString" value="fig_34_art_102"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Preavviso deviazione consigliata autocarri in transito " type="QString" value="fig_350_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Direzione autocarri consigliata " type="QString" value="fig_351_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Limiti di velocità generali " type="QString" value="fig_352_art_135"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pronto soccorso " type="QString" value="fig_353_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Assistenza meccanica " type="QString" value="fig_354_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Telefono " type="QString" value="fig_355_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Rifornimento " type="QString" value="fig_356_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Rifornimento " type="QString" value="fig_357_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fermata autobus " type="QString" value="fig_358_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fermata tram" type="QString" value="fig_359_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Altri pericoli " type="QString" value="fig_35_art_103"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Informazioni " type="QString" value="fig_360_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ostello per gioventu`" type="QString" value="fig_361_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Area picnic " type="QString" value="fig_362_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Campeggio" type="QString" value="fig_363_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Radio informazioni stradali " type="QString" value="fig_364_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Motel " type="QString" value="fig_365_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Bar" type="QString" value="fig_366_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ristorante" type="QString" value="fig_367_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Parcheggio di scambio con linee autobus " type="QString" value="fig_368_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Parcheggio di scambio con tram " type="QString" value="fig_369_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Dare precedenza " type="QString" value="fig_36_art_106"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Parcheggio di scambio con metropolitane o altri servizi extraurbani su rotaia " type="QString" value="fig_370_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Parcheggio di scambio in corrispondenza di itinerari turistici o escursionistici a piedi " type="QString" value="fig_371_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Auto su treno " type="QString" value="fig_372_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Auto al seguito " type="QString" value="fig_373_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Auto su nave " type="QString" value="fig_374_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Taxi " type="QString" value="fig_375_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Area dii servizio autostrada (colore di fondo verde) Area servizio strada extraurbana (colore di fondo blu)" type="QString" value="fig_376_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Area attrezzata con impianti di scarico " type="QString" value="fig_377_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Polizia stradale " type="QString" value="fig_378_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Polizia si stato " type="QString" value="fig_379_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fermarsi dare precedenza " type="QString" value="fig_37_art_107"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Carabinieri " type="QString" value="fig_380_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Guardia di finanza " type="QString" value="fig_381_art_136"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Preavviso di dare precedenza " type="QString" value="fig_38_art_108"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Preavviso di fermarsi e dare precedenza " type="QString" value="fig_39_art_108"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Cunetta " type="QString" value="fig_3_art_86"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Intersezione con precedenza a destra " type="QString" value="fig_40_art_109"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Dare precedenza nei sensi unici " type="QString" value="fig_41_art_110"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine del diritto di precedenza " type="QString" value="fig_42_art_111"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Intersezione con diritto di precedenza " type="QString" value="fig_43a_art_112"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Intersezione a T con diritto di precedenza " type="QString" value="fig_43b_art_112"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Intersezione a T con diritto di precedenza " type="QString" value="fig_43c_art_112"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Confluenza a destra " type="QString" value="fig_43d_art_112"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Confluenza a sinistra " type="QString" value="fig_43e_art_112"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Diritto di precedenza " type="QString" value="fig_44_art_113"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Diritto di precedenza nei sensi unici alternati " type="QString" value="fig_45_art_114"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Divieto di transito  " type="QString" value="fig_46_art_116"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Senso vietato " type="QString" value="fig_47_art_116"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Divieto di sorpasso " type="QString" value="fig_48_art_116"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Distanziamento minimo obbligatorio di n metri " type="QString" value="fig_49_art_116"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Curva a destra " type="QString" value="fig_4_art_86"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Limite massima velocità di n Km/h " type="QString" value="fig_50_art_116"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Divieto di sorpasso per veicoli di massa a pieno carico superiore a 3.5 tonnellate " type="QString" value="fig_52_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai veicoli a trazione animale " type="QString" value="fig_53_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai pedoni " type="QString" value="fig_54_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato alle biciclette " type="QString" value="fig_55_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai motocicli" type="QString" value="fig_56_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato a veicoli a braccia " type="QString" value="fig_57_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato a tutti gli autoveicoli " type="QString" value="fig_58_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato agli autobus " type="QString" value="fig_59_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Curva a sinistra " type="QString" value="fig_5_art_86"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai veicoli di massa a pieno carico superiore a 3.5 tonnellate " type="QString" value="fig_60a_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai veicoli di massa a pieno carico superiore a n tonnellate " type="QString" value="fig_60b_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai veicoli a motore trainanti un rimorchio " type="QString" value="fig_61_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato alle macchine agricole " type="QString" value="fig_62_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai veicoli che trasportano merci pericolose " type="QString" value="fig_63_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai veicoli che trasportano esplosivo o prodotti facilmente infiammabili " type="QString" value="fig_64a_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transiti vietato ai veicoli ai veicoli che trasportano prodotti suscettibili di contaminare l´acqua  " type="QString" value="fig_64b_art_117"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai veicoli aventi larghezza superiore a n metri " type="QString" value="fig_65_art_118"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai veicoli aventi altezza superiore a n metri " type="QString" value="fig_66_art_118"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai veicoli o complessi di veicoli aventi lunghezza superiore a n metri " type="QString" value="fig_67_art_118"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai veicoli aventi una massa superiore a n tonnellate " type="QString" value="fig_68_art_118"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Transito vietato ai veicoli aventi massa per asse superiore a n tonnellate " type="QString" value="fig_69_art_118"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Doppia curva la prima a destra " type="QString" value="fig_6_art_86"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Via libera" type="QString" value="fig_70_art_119"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine limitazione velocità" type="QString" value="fig_71_art_119"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine del divieto di sorpasso" type="QString" value="fig_72_art_119"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine del divieto di sorpasso per i veicoli di massa a pieno carico superiore a 3.5 tonnellate " type="QString" value="fig_73_art_119"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Divieto di sosta  " type="QString" value="fig_74_art_120"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Divieto di fermata" type="QString" value="fig_75_art_120"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Parcheggio" type="QString" value="fig_76_art_120"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Preavviso di parcheggio" type="QString" value="fig_77_art_120"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Passo carrabile " type="QString" value="fig_78_art_120"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Sosta consentita a particolari categorie " type="QString" value="fig_79a_art_120"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Sosta consentita a particolari categorie " type="QString" value="fig_79b_art_120"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Sosta consentita a particolari categorie " type="QString" value="fig_79c_art_120"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Regolazione flessibile della sosta in centro abitato " type="QString" value="fig_79d_art_120"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Zona rimozione " type="QString" value="fig_79e_art_120"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Doppia curva la prima a sinistra " type="QString" value="fig_7_art_86"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Direzione obbligatoria diritto " type="QString" value="fig_80a_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Direzione obbligatoria a sinistra " type="QString" value="fig_80b_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Direzione obbligatoria a destra " type="QString" value="fig_80c_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Preavviso di direzione obbligatoria a destra " type="QString" value="fig_80d_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Preavviso di direzione obbligatoria a sinistra  " type="QString" value="fig_80e_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Direzioni consentite a destra e sinistra " type="QString" value="fig_81a_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Direzioni consentite diritto e destra " type="QString" value="fig_81b_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Direzioni consentite diritto e sinistra " type="QString" value="fig_81c_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Passaggio obbligatorio a sinistra " type="QString" value="fig_82a_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Passaggio obbligatorio a destra" type="QString" value="fig_82b_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Passaggi consentiti " type="QString" value="fig_83_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Rotatoria " type="QString" value="fig_84_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Limite minimo di velocità" type="QString" value="fig_85_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine del limite minimo di velocità " type="QString" value="fig_86_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Catene da neve obbligatorie " type="QString" value="fig_87_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Percorso pedonale " type="QString" value="fig_88_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine del percorso pedonale " type="QString" value="fig_89_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Passaggio a livello con barriere " type="QString" value="fig_8_art_87"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pista ciclabile " type="QString" value="fig_90_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine pista ciclabile " type="QString" value="fig_91_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pista ciclabile contigua al marciapiede " type="QString" value="fig_92a_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Percorso pedonale e ciclabile " type="QString" value="fig_92b_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine pista ciclabile contigua al marciapiede " type="QString" value="fig_93a_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine del percorso pedonale e ciclabile " type="QString" value="fig_93b_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Percorso riservato ai quadrupedi da soma o da sella " type="QString" value="fig_94_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine del percorso riservato ai quadrupedi da soma o da sella " type="QString" value="fig_95_art_122"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Alt-Dogana " type="QString" value="fig_96_art_123"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Confine di stato tra paesi della comunità europea " type="QString" value="fig_97a_art_123"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Preavviso di confine di stato tra pesi della comunità europea " type="QString" value="fig_97b_art_123"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Alt-Polizia " type="QString" value="fig_98_art_123"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Alt-Stazione " type="QString" value="fig_99_art_123"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Passaggio a livello senza barriere " type="QString" value="fig_9_art_87"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Divieto di segnalazioni acustiche " type="QString" value="fog_51_art_116"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Distanza " type="QString" value="mod_1_art_83_1b"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Estesa" type="QString" value="mod_2_art_83_2a"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Estesa" type="QString" value="mod_2_art_83_2b"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Validità" type="QString" value="mod_3_art_83_3a"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Validità" type="QString" value="mod_3_art_83_3b"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Validità" type="QString" value="mod_3_art_83_3c"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Validità" type="QString" value="mod_3_art_83_3d"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Limitazione o eccezione " type="QString" value="mod_4_art_83_4a"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Limitazione o eccezione " type="QString" value="mod_4_art_83_4b"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Inizio " type="QString" value="mod_5_a1"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Continua " type="QString" value="mod_5_a2"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine  " type="QString" value="mod_5_a3"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Inizio " type="QString" value="mod_5_b1"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Continua " type="QString" value="mod_5_b2"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Fine  " type="QString" value="mod_5_b3"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segni orizzontali in rifacimento " type="QString" value="mod_6_art_83_6a"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Incidente " type="QString" value="mod_6_art_83_6b"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Attraversamento di binari " type="QString" value="mod_6_art_83_6c"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Sgombraneve in azione " type="QString" value="mod_6_art_83_6d"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Zona soggetta ad allagamenti " type="QString" value="mod_6_art_83_6e"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Coda " type="QString" value="mod_6_art_83_6f"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Mezzi di lavoro in azione " type="QString" value="mod_6_art_83_6g"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Strada sdrucciolevole per ghiaccio " type="QString" value="mod_6_art_83_6h"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Strada sdrucciolevole per pioggia " type="QString" value="mod_6_art_83_6i"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Autocarri in rallentamento " type="QString" value="mod_6_art_83_6l"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Zona rimozione coatta " type="QString" value="mod_6_art_83_6m"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnale di corsia " type="QString" value="mod_6_art_83_6n"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Tornante " type="QString" value="mod_6_art_83_6p1"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Numero del tornante " type="QString" value="mod_6_art_83_6p2"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pulizia meccanica della strada " type="QString" value="mod_6_art_83_6q1"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pulizia meccanica della strada " type="QString" value="mod_6_art_83_6q2"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Andamento della strada principale " type="QString" value="mod_7_art_83_7a"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Andamento della strada principale " type="QString" value="mod_7_art_83_7b"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Andamento della strada principale " type="QString" value="mod_7_art_83_7c"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Andamento della strada principale " type="QString" value="mod_7_art_83_7d"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Andamento della strada principale " type="QString" value="mod_7_art_83_7e"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Divieto di sosta temporaneo " type="QString" value="mod_8_art_83_8a"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Itinerario obbligatorio merci pericolose " type="QString" value="mod_8_art_83_8b"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Preavviso deviazione obbligatoria autocarri in transito " type="QString" value="mod_8_art_83_8c"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Divieto di transito autocarri " type="QString" value="mod_8_art_83_8d"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Altro" type="QString" value="nc"/>
+                  </Option>
+                </Option>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="codice_segnale">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="codice_supporto">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="num_segnale">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="data_rilievo">
-          <editWidget type="">
+          <editWidget type="DateTime">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="allow_null" type="bool" value="true"/>
+                <Option name="calendar_popup" type="bool" value="true"/>
+                <Option name="display_format" type="QString" value="yyyy-MM-dd HH:mm:ss"/>
+                <Option name="field_format" type="QString" value="yyyy-MM-dd HH:mm:ss"/>
+                <Option name="field_iso_format" type="bool" value="false"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="rilevatore">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="ditta_fornitrice">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="d_tipo_elemento">
-          <editWidget type="">
+          <editWidget type="ValueMap">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="map" type="List">
+                  <Option type="Map">
+                    <Option name="Impianto eliminato" type="QString" value="E"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Impianto modificato" type="QString" value="M"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Nuovo impianto" type="QString" value="N"/>
+                  </Option>
+                </Option>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="forma">
-          <editWidget type="">
+          <editWidget type="ValueMap">
             <config>
-              <Option/>
+              <Option type="Map">
+                <Option name="map" type="List">
+                  <Option type="Map">
+                    <Option name="Triangolo" type="QString" value="1"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pannello integrativo segnali circolari" type="QString" value="10"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pannello integrativo mod. 5 verticali" type="QString" value="11"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pannello integrativo mod. 5 orizzontali" type="QString" value="12"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di direzione urbani su una riga" type="QString" value="13"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di direzione urbani su due righe" type="QString" value="14"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di direzione extraurbano su una riga" type="QString" value="15"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali di direzione extraurbano su due righe" type="QString" value="16"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Segnali nome strada" type="QString" value="17"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Rettangolo (segn. compl.)" type="QString" value="18"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Cilindro (segn. compl.)" type="QString" value="19"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Disco" type="QString" value="2"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Quadrato (segn. compl.)" type="QString" value="20"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Ottagono" type="QString" value="3"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Rombo" type="QString" value="4"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Quadrato" type="QString" value="5"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Rettangolo (indicazione)" type="QString" value="6"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Rettangolo (servizi)" type="QString" value="7"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pannello integrativo segnali quadrati" type="QString" value="8"/>
+                  </Option>
+                  <Option type="Map">
+                    <Option name="Pannello integrativo segnali triangolari" type="QString" value="9"/>
+                  </Option>
+                </Option>
+              </Option>
             </config>
           </editWidget>
         </field>
         <field name="testo">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="data_ins">
-          <editWidget type="">
+          <editWidget type="DateTime">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="data_agg">
-          <editWidget type="">
+          <editWidget type="DateTime">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="percorso">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="edit">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
@@ -3072,13 +5295,120 @@ def my_form_open(dialog, layer, feature):
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
       <editforminitfilepath></editforminitfilepath>
-      <editforminitcode><![CDATA[]]></editforminitcode>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
+
+Utilisez cette fonction pour ajouter plus de fonctionnalités à vos formulaires.
+
+Entrez le nom de la fonction dans le champ "Fonction d'initialisation Python".
+Voici un exemple à suivre:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+    geom = feature.geometry()
+    control = dialog.findChild(QWidget, "MyLineEdit")
+
+]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
-      <editable/>
-      <labelOnTop/>
+      <editable>
+        <field editable="1" name="altezza"/>
+        <field editable="1" name="codice_segnale"/>
+        <field editable="1" name="codice_supporto"/>
+        <field editable="1" name="d_amm_rilasciante"/>
+        <field editable="1" name="d_arch"/>
+        <field editable="1" name="d_codice_segnale"/>
+        <field editable="1" name="d_composito"/>
+        <field editable="1" name="d_dimensione"/>
+        <field editable="1" name="d_ditta_installante"/>
+        <field editable="1" name="d_illuminato"/>
+        <field editable="1" name="d_materiale"/>
+        <field editable="1" name="d_stato"/>
+        <field editable="1" name="d_tipo_classe"/>
+        <field editable="1" name="d_tipo_elemento"/>
+        <field editable="1" name="d_tipo_segnale"/>
+        <field editable="1" name="data_agg"/>
+        <field editable="1" name="data_autorizzazione"/>
+        <field editable="1" name="data_eliminazione"/>
+        <field editable="1" name="data_fabbricazione"/>
+        <field editable="1" name="data_ins"/>
+        <field editable="1" name="data_installazione"/>
+        <field editable="1" name="data_ordinanza"/>
+        <field editable="1" name="data_rilievo"/>
+        <field editable="1" name="data_scadenza"/>
+        <field editable="1" name="data_sostituzione"/>
+        <field editable="1" name="denominazione"/>
+        <field editable="1" name="ditta_fornitrice"/>
+        <field editable="1" name="edit"/>
+        <field editable="1" name="ente_proprietario"/>
+        <field editable="1" name="fid"/>
+        <field editable="1" name="fk_ditta_produttrice"/>
+        <field editable="1" name="fk_foto"/>
+        <field editable="1" name="fk_segnalestradale"/>
+        <field editable="1" name="forma"/>
+        <field editable="1" name="id_grupposegnale"/>
+        <field editable="1" name="id_segnale_fisico"/>
+        <field editable="1" name="nm_autorizzazione"/>
+        <field editable="1" name="note"/>
+        <field editable="1" name="num_segnale"/>
+        <field editable="1" name="ordinanza"/>
+        <field editable="1" name="percorso"/>
+        <field editable="1" name="rilevatore"/>
+        <field editable="1" name="testo"/>
+        <field editable="1" name="toponimo"/>
+        <field editable="1" name="txtamm_ril"/>
+      </editable>
+      <labelOnTop>
+        <field name="altezza" labelOnTop="0"/>
+        <field name="codice_segnale" labelOnTop="0"/>
+        <field name="codice_supporto" labelOnTop="0"/>
+        <field name="d_amm_rilasciante" labelOnTop="0"/>
+        <field name="d_arch" labelOnTop="0"/>
+        <field name="d_codice_segnale" labelOnTop="0"/>
+        <field name="d_composito" labelOnTop="0"/>
+        <field name="d_dimensione" labelOnTop="0"/>
+        <field name="d_ditta_installante" labelOnTop="0"/>
+        <field name="d_illuminato" labelOnTop="0"/>
+        <field name="d_materiale" labelOnTop="0"/>
+        <field name="d_stato" labelOnTop="0"/>
+        <field name="d_tipo_classe" labelOnTop="0"/>
+        <field name="d_tipo_elemento" labelOnTop="0"/>
+        <field name="d_tipo_segnale" labelOnTop="0"/>
+        <field name="data_agg" labelOnTop="0"/>
+        <field name="data_autorizzazione" labelOnTop="0"/>
+        <field name="data_eliminazione" labelOnTop="0"/>
+        <field name="data_fabbricazione" labelOnTop="0"/>
+        <field name="data_ins" labelOnTop="0"/>
+        <field name="data_installazione" labelOnTop="0"/>
+        <field name="data_ordinanza" labelOnTop="0"/>
+        <field name="data_rilievo" labelOnTop="0"/>
+        <field name="data_scadenza" labelOnTop="0"/>
+        <field name="data_sostituzione" labelOnTop="0"/>
+        <field name="denominazione" labelOnTop="0"/>
+        <field name="ditta_fornitrice" labelOnTop="0"/>
+        <field name="edit" labelOnTop="0"/>
+        <field name="ente_proprietario" labelOnTop="0"/>
+        <field name="fid" labelOnTop="0"/>
+        <field name="fk_ditta_produttrice" labelOnTop="0"/>
+        <field name="fk_foto" labelOnTop="0"/>
+        <field name="fk_segnalestradale" labelOnTop="0"/>
+        <field name="forma" labelOnTop="0"/>
+        <field name="id_grupposegnale" labelOnTop="0"/>
+        <field name="id_segnale_fisico" labelOnTop="0"/>
+        <field name="nm_autorizzazione" labelOnTop="0"/>
+        <field name="note" labelOnTop="0"/>
+        <field name="num_segnale" labelOnTop="0"/>
+        <field name="ordinanza" labelOnTop="0"/>
+        <field name="percorso" labelOnTop="0"/>
+        <field name="rilevatore" labelOnTop="0"/>
+        <field name="testo" labelOnTop="0"/>
+        <field name="toponimo" labelOnTop="0"/>
+        <field name="txtamm_ril" labelOnTop="0"/>
+      </labelOnTop>
       <widgets/>
-      <previewExpression>"denominazione"</previewExpression>
+      <previewExpression>denominazione</previewExpression>
       <mapTip></mapTip>
     </maplayer>
     <maplayer readOnly="0" autoRefreshEnabled="0" geometry="No geometry" wkbType="NoGeometry" styleCategories="AllStyleCategories" type="vector" refreshOnNotifyEnabled="0" hasScaleBasedVisibilityFlag="0" refreshOnNotifyMessage="" minScale="1e+08" autoRefreshTime="0" maxScale="0">

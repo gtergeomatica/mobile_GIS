@@ -1,3 +1,5 @@
+.. image:: img/qfield_logo.png
+
 QField
 ==================================
 
@@ -31,8 +33,12 @@ Il plugin QFieldSync funziona anche dal progetto QField al progetto *Desktop*.
 
 Vantaggi e svantaggi
 -----------------------------------
+..
+    TODO: Ordinare le idee
 
-È possibile di vedere raster layer con QField. Però, preferisce il geopackage agli altri formati di dati affinché
-il caricamento sia più veloce. 
+* È possibile di vedere raster layer con QField. 
 
-L'app è maneggevole con la possibilità di personnalizzare il modulo degli attributi sul Desktop. 
+.. hint:: Sceglie il Geopackage agli altri formati come TIF per esempio per il raster affinché il caricamento sia più veloce.
+
+* L'app è maneggevole con la possibilità di personnalizzare il modulo degli attributi sul Desktop. 
+* Durante la modifica, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori "__Infinity__" per X e Y.
