@@ -3,9 +3,7 @@ Input
 
 .. image:: img/logo_input.png
 
-Un GIS mobile app sviluppato da Mergin
-
-.. note:: L'analisi dell'applicazione è realizzato sulla versione 0.6.1 di Input.
+Un GIS mobile app sviluppato da Lutra Consulting (https://inputapp.io/).
 
 
 Installazione
@@ -27,4 +25,30 @@ Installazione
 Funzionamento
 -------------------------------------
 
-Input pertanto utiliza il servizio d'archiviazione Mergin per la sincronizzazione dei dati tra QGIS e l'app.
+Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincronizzazione dei dati tra QGIS e l'app.
+
+Vantaggi e svantaggi
+----------------------------------
+
+.. raw:: html
+
+    <style>
+        th,td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        th{
+            background-color:#cccccc;
+        }
+    </style>
+    <table style="border: 1px solid #000000;">
+        <tr style="text-align:center;"><th>Vantaggi</th><th>Svantaggi</th></tr>
+        <tr>
+        <td><ul>
+        <li></li>
+        </ul></td>
+        <td><ul>
+        <li>No checkbox (è sostituito da un switch con un text area)</li>
+        </ul></td>
+    </tr></table>

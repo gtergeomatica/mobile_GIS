@@ -3,10 +3,7 @@ QField
 
 .. image:: img/qfield-logo.png
 
-Un mobile GIS app con gli obiettivi di accedere ai QGIS strumenti necessari sul terrano.
-
-
-.. note:: L'analisi dell'applicazione è realizzato sulla versione 1.5.3 - Piz Palü di QField.
+Un mobile GIS app con gli obiettivi di accedere ai QGIS strumenti necessari sul terrano (https://qfield.org/).
 
 
 Installazione
@@ -22,7 +19,7 @@ L'app usa un progetto QGIS esistente. Per vedere ed modificare dati, bisogna di:
 #. Esportare il progetto per l'app con il plugin `QFieldSync <https://plugins.qgis.org/plugins/qfieldsync/>`__
 #. Copiare il progetto QField sul mobile
 
-.. warning:: Il progetto deve essere nel **Internal storage** (non in una scheda SD) per modificare i dati.
+.. warning:: Il progetto deve essere nel **Internal storage** (non in una scheda SD esterna) per modificare i dati. Deve convertire la scheda vuota nella memoria interna.
 
 Il plugin QFieldSync funziona anche dal progetto QField al progetto *Desktop*.
 
@@ -38,6 +35,7 @@ Vantaggi e svantaggi
     <style>
         th,td{
             border: 1px solid black;
+            padding: 5px;
         }
 
         th{
@@ -47,6 +45,11 @@ Vantaggi e svantaggi
     <table style="border: 1px solid #000000;">
         <tr style="text-align:center;"><th>Vantaggi</th><th>Svantaggi</th></tr>
         <tr>
-        <td><p>Personnalizzazione del modulo degli attributi con QGIS Desktop</p></td>
-        <td><p>Durante la modifica, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori *Infinity* per X e Y.</p></td>
+        <td><ul>
+        <li>Personnalizzazione del modulo degli attributi con QGIS Desktop</li>
+        <li>Memoria locale sul telefono - Manovrabilità con il GDPR</li> 
+        </ul></td>
+        <td><ul>
+        <li>Durante la modifica, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori <i>Infinity</i> per X e Y.</li>
+        </ul></td>
     </tr></table>

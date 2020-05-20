@@ -4,13 +4,7 @@ IntraMap
 .. image:: img/logo_roam.png
 
 
-.. note:: L'analisi dell'applicazione è realizzato sulla versione Roam 3 - Beta 3 di IntraMap e QGIS 3.10.5-A Coruña Standalone.
-
-
-Installazione
-----------------------------------
-
-L'applicazione può essere installata su Windows con un installatore.
+L'applicazione può essere installata su Windows con un installatore (https://roam-docs.readthedocs.io/en/latest/).
 
 
 Funzionamento
@@ -27,7 +21,35 @@ Funzionamento
 
 * Nella scheda *Design*, configurare il tipo di campo di riempimento per ogni attributo
 * Salvare il progetto e aprire **Roam.exe**
-* Caricare il progetto
+* Caricare lo da l'elenco dei progetti
 
 .. warning:: Gli elenchi creati da un altro layer non funzionano per questa prova.
 
+L'app offre la possibilità di pubblicare il progetto su un server web. Gli utenti possono scaricare il progetto su loro computer.
+
+
+Vantaggi e svantaggi
+----------------------------------
+
+.. raw:: html
+
+    <style>
+        th,td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        th{
+            background-color:#cccccc;
+        }
+    </style>
+    <table style="border: 1px solid #000000;">
+        <tr style="text-align:center;"><th>Vantaggi</th><th>Svantaggi</th></tr>
+        <tr>
+        <td><ul>
+        <li></li>
+        </ul></td>
+        <td><ul>
+        <li></li>
+        </ul></td>
+    </tr></table>
