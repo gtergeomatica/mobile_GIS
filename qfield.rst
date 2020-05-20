@@ -33,7 +33,7 @@ Vantaggi e svantaggi
 ..
     TODO: Ordinare le idee
 
-.. code-block:: html
+.. raw:: html
 
 <table>
 <tr><th>Vantaggi</th><th>Svantaggi</th></tr>
