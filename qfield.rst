@@ -33,10 +33,11 @@ Vantaggi e svantaggi
 ..
     TODO: Ordinare le idee
 
-+================================================================+================================================================+
-|                                Vantaggi                        |                            Svantaggi                           |
-+================================================================+================================================================+
-| * Personnalizzazione del modulo degli attributi con            | * Durante la modifica, la disattivazione della visualizzazione | 
-|  QGIS Desktop                                                  | delle coordinate tieniti sullo schermo i valori *Infinity*     |
-|                                                                | per X e Y.                                                     |
-+----------------------------------------------------------------+-----------------------------------------------------------------+
+.. code-block:: html
+    <table>
+        <tr><th>Vantaggi</th><th>Svantaggi</th></tr>
+        <tr>
+            <td><p>Personnalizzazione del modulo degli attributi con QGIS Desktop</p><td>
+            <td><p>Durante la modifica, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori *Infinity* per X e Y.</p></td>
+        </tr>
+    </table>
