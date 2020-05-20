@@ -29,5 +29,5 @@ Funzionamento
 * Salvare il progetto e aprire **Roam.exe**
 * Caricare il progetto
 
-.. warning:: Gli elenchi creati da un altro layer non funzionano.
+.. warning:: Gli elenchi creati da un altro layer non funzionano per questa prova.
 
