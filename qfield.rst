@@ -35,8 +35,13 @@ Vantaggi e svantaggi
 
 .. raw:: html
 
-    <table>
-        <tr><th>Vantaggi</th><th>Svantaggi</th></tr>
+    <style>
+        th,td{
+            border: 1px solid black;
+        }
+    </style>
+    <table style="border: 1px solid #000000;">
+        <tr style="text-align:center;"><th>Vantaggi</th><th>Svantaggi</th></tr>
         <tr>
         <td><p>Personnalizzazione del modulo degli attributi con QGIS Desktop</p><td>
         <td><p>Durante la modifica, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori *Infinity* per X e Y.</p></td>
