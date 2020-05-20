@@ -26,15 +26,17 @@ L'app usa un progetto QGIS esistente. Per vedere ed modificare dati, bisogna di:
 
 Il plugin QFieldSync funziona anche dal progetto QField al progetto *Desktop*.
 
+.. hint:: Sceglie il Geopackage agli altri formati per i raster affinché il caricamento sia più veloce.
 
 Vantaggi e svantaggi
 -----------------------------------
 ..
     TODO: Ordinare le idee
 
-* È possibile di vedere raster layer con QField. 
-
-.. hint:: Sceglie il Geopackage agli altri formati come TIF per esempio per il raster affinché il caricamento sia più veloce.
-
-* L'app è maneggevole con la possibilità di personnalizzare il modulo degli attributi sul Desktop. 
-* Durante la modifica, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori *Infinity* per X e Y.
++================================================================+================================================================+
+|                                Vantaggi                        |                            Svantaggi                           |
++================================================================+================================================================+
+| * Personnalizzazione del modulo degli attributi con            | * Durante la modifica, la disattivazione della visualizzazione | 
+|  QGIS Desktop                                                  | delle coordinate tieniti sullo schermo i valori *Infinity*     |
+|                                                                | per X e Y.                                                     |
++----------------------------------------------------------------+-----------------------------------------------------------------+
