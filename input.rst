@@ -27,6 +27,9 @@ Funzionamento
 
 Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincronizzazione dei dati tra QGIS e l'app.
 
+.. image:: img/input_funzionamento_generale.png
+
+
 Vantaggi e svantaggi
 ----------------------------------
 
@@ -49,6 +52,7 @@ Vantaggi e svantaggi
         <li></li>
         </ul></td>
         <td><ul>
+        <li>La modifica dei layers non geografici non è sviluppata</li> 
         <li>No checkbox (è sostituito da un switch con un text area)</li>
         </ul></td>
     </tr></table>
