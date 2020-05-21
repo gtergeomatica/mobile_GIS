@@ -1,8 +1,6 @@
 Input
 ==================================
 
-.. image:: img/logo_input.png
-
 Un GIS mobile app sviluppato da Lutra Consulting (https://inputapp.io/).
 
 
@@ -15,11 +13,15 @@ Installazione
 
 .. note:: È possibile che il plugin sia completamente installato dopo avere riavviare QGIS.
 
+* Creare il progetto QGIS con i layers (preferisce il Geopackage), il style, il modulo d'attributi, ...
+
+.. note:: Il sistema di coordinate di riferimento del progetto per usare il GPS deve essere il WGS84/Pseudo-Mercator (EPSG:3857). In caso contrario, la mappa è centrata alle coordinate predefinite, ad esempio al punto (0,0) in WGS84.
+
 * Configurare il plugin nel **Browser panel** con gli impostazioni dell'account
-* Creare un nuovo progetto Mergin (possibilità di creare da un directory locale)
+* Creare un nuovo progetto Mergin (possibilità di creare da un directory locale o un progetto vuoto)
 * Mergin va sincronizzando il progetto Mergin con il progetto locale
 * Connettersi all'account sull'applicazione Input
-* Il progetto è disponibile sull'app, nella sezione "I miei progetti"
+* Il progetto è disponibile sull'app, nella sezione *I miei progetti*
 
 
 Funzionamento
@@ -28,6 +30,18 @@ Funzionamento
 Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincronizzazione dei dati tra QGIS e l'app.
 
 .. image:: img/input_funzionamento_generale.png
+
+..
+    Ordinare le idee
+
+Funzionalità:
+
+* Aggiunger un'entità a un layer selezionato
+* Modificare la geometria di un'entità
+* Modificare gli attributi non geografici di un'entità
+* Identificare un'entità
+* Piazzare un punto alla posizione GPS
+* Disegnare una linea o un poligono monitorando la posizione GPS
 
 
 Vantaggi e svantaggi
@@ -49,10 +63,19 @@ Vantaggi e svantaggi
         <tr style="text-align:center;"><th>Vantaggi</th><th>Svantaggi</th></tr>
         <tr>
         <td><ul>
-        <li></li>
+        <li>Rilievo offline possibile</li>
+        <li>Sincronizzazione veloce tra il rilievo e il progetto Desktop</li>
         </ul></td>
         <td><ul>
-        <li>La modifica dei layers non geografici non è sviluppata</li> 
+        <li>La modifica dei layers non geografici non è sviluppata</li>
+        <li>Il vincolo *not null* non funziona sull'app, tranne i campi auto generati</li>
         <li>No checkbox (è sostituito da un switch con un text area)</li>
         </ul></td>
     </tr></table>
+
+
+Documentazione
+------------------------------
+
+#. https://github.com/lutraconsulting/input/blob/master/docs/users/introduction.md
+#. https://www.lutraconsulting.co.uk/blog/2020/02/14/survey-qgis-input/

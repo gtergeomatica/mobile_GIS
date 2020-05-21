@@ -1,8 +1,6 @@
 QField
 ==================================
 
-.. image:: img/logo_qfield.png
-
 Un mobile GIS app con gli obiettivi di accedere ai QGIS strumenti necessari sul terrano (https://qfield.org/).
 
 
@@ -24,6 +22,23 @@ L'app usa un progetto QGIS esistente. Per vedere ed modificare dati, bisogna di:
 Il plugin QFieldSync funziona anche dal progetto QField al progetto *Desktop*.
 
 .. hint:: Sceglie il Geopackage agli altri formati per i raster affinché il caricamento sia più veloce.
+
+
+Funzionamento
+----------------------------------
+
+..
+    Ordinare le idee
+
+Funzionalità:
+
+* Aggiunger un'entità a un layer selezionato
+* Modificare la geometria di un'entità
+* Modificare gli attributi non geografici di un'entità
+* Identificare un'entità
+* Piazzare un punto alla posizione GPS
+* Disegnare una linea o un poligono monitorando la posizione GPS
+
 
 Vantaggi e svantaggi
 -----------------------------------
@@ -48,6 +63,7 @@ Vantaggi e svantaggi
         <td><ul>
         <li>Personnalizzazione del modulo degli attributi con QGIS Desktop</li>
         <li>Memoria locale sul telefono - Manovrabilità con il GDPR</li> 
+        <li>I vincoli degli attributi sono rispettati</li>
         </ul></td>
         <td><ul>
         <li>Durante la modifica, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori <i>Infinity</i> per X e Y.</li>
