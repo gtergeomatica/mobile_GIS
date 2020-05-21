@@ -27,6 +27,8 @@ Il plugin QFieldSync funziona anche dal progetto QField al progetto *Desktop*.
 Funzionamento
 ----------------------------------
 
+.. image:: img/qfield_funzionamento_generale.png
+
 ..
     Ordinare le idee
 
