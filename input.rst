@@ -71,8 +71,9 @@ Vantaggi e svantaggi
         <li>Sincronizzazione abbastanza veloce tra il rilievo e il progetto Desktop e molto veloce senza immagini</li>
         </ul></td>
         <td><ul>
-        <li>La modifica dei layers non geografici non è sviluppata</li>
         <li>Il vincolo *not null* non funziona sull'app, tranne i campi auto generati</li>
+        <li>Non supporta i relazioni 1->n</li>
+        <li>La modifica dei layers non geografici non è sviluppata</li>
         <li>I percorsi degli attaccamenti, per esempio gli immagini, non cambiano dopo sincronizzazione sul computer</li>
         <li>No checkbox (è sostituito da un switch con un text area)</li>
         </ul></td>

@@ -16,15 +16,13 @@ L'ultima versione è disponibile a questo `link <https://github.com/opengisch/QF
 L'app usa un progetto QGIS esistente. Per vedere ed modificare dati, bisogna di:
 
 #. Creare il progetto su QGIS Desktop
-#. Creare o aggiungere i layers, le style, etc...
+#. Creare o aggiungere i layers, i stili, il form, etc...
 #. Esportare il progetto per l'app con il plugin `QFieldSync <https://plugins.qgis.org/plugins/qfieldsync/>`__
 #. Copiare il progetto QField sul mobile
 
-.. warning:: Il progetto deve essere nel **Internal storage** (non in una scheda SD esterna) per modificare i dati. Deve convertire la scheda vuota nella memoria interna.
+.. warning:: Il progetto deve essere nel *Internal storage* (non in una scheda SD esterna) per modificare i dati. Deve convertire la scheda *vuota* nella memoria interna.
 
-
-
-.. hint:: Sceglie il Geopackage agli altri formati per i raster affinché il caricamento sia più veloce.
+.. hint:: Sceglie il Geopackage agli altri formati affinché il caricamento sia più veloce.
 
 
 Funzionamento
@@ -63,9 +61,10 @@ Vantaggi e svantaggi
         <tr style="text-align:center;"><th>Vantaggi</th><th>Svantaggi</th></tr>
         <tr>
         <td><ul>
-        <li>Personnalizzazione del modulo degli attributi con QGIS Desktop</li>
+        <li>Conservazione della personnalizzazione del form, della simbologia di QGIS</li>
         <li>Memoria locale sul telefono - Manovrabilità con il GDPR</li> 
-        <li>I vincoli degli attributi sono rispettati</li>
+        <li>Conservazione dei vincoli sugli attributi</li>
+        <li>Supporta i relazioni 1->n</li>
         </ul></td>
         <td><ul>
         <li>Durante la modifica, con il GPS spento, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori <i>Infinity</i> per X e Y.</li>

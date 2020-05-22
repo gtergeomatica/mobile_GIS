@@ -70,6 +70,7 @@ Vantaggi e svantaggi
         <tr>
         <td><ul>
         <li>Grande interfaccia</li>
+        <li>Personalizzazione del form</li>
         </ul></td>
         <td><ul>
         <li>App ancora in fase di sviluppo</li>
