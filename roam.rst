@@ -39,6 +39,17 @@ Funzionamento
 L'app offre la possibilità di pubblicare il progetto su un server web. Gli utenti possono scaricare il progetto su loro computer.
 
 
+Funzionalità
++++++++++++++++++++++
+
+* Aggiunta di un'entità a un layer selezionato
+* Modifica della geometria e degli attributi non geografici di un'entità
+* Identificazione un'entità
+* Localizzazione GPS e acquisizione della posizione
+* Modulo generato automaticamente
+* Configurazione il pannelli informativi
+
+
 Vantaggi e svantaggi
 ----------------------------------
 
@@ -58,9 +69,10 @@ Vantaggi e svantaggi
         <tr style="text-align:center;"><th>Vantaggi</th><th>Svantaggi</th></tr>
         <tr>
         <td><ul>
-        <li></li>
+        <li>Grande interfaccia</li>
         </ul></td>
         <td><ul>
-        <li></li>
+        <li>App ancora in fase di sviluppo</li>
+        <li>Non esiste per Android</li>
         </ul></td>
     </tr></table>

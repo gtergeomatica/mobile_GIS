@@ -34,17 +34,15 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 
 .. image:: img/input_funzionamento_generale.png
 
-..
-    Ordinare le idee
 
-Funzionalità:
+Funzionalità
++++++++++++++++++++++
 
-* Aggiunger un'entità a un layer selezionato
-* Modificare la geometria di un'entità
-* Modificare gli attributi non geografici di un'entità
-* Identificare un'entità
-* Piazzare un punto alla posizione GPS
-* Disegnare una linea o un poligono monitorando la posizione GPS
+* Aggiunta di un'entità a un layer selezionato
+* Modifica della geometria e degli attributi non geografici di un'entità
+* Identificazione di un'entità geografica
+* Posizionamento di un punto con il GPS
+* Tracciare linee o poligoni monitorando la posizione GPS
 
 
 Vantaggi e svantaggi

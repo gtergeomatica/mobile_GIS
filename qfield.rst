@@ -22,7 +22,7 @@ L'app usa un progetto QGIS esistente. Per vedere ed modificare dati, bisogna di:
 
 .. warning:: Il progetto deve essere nel **Internal storage** (non in una scheda SD esterna) per modificare i dati. Deve convertire la scheda vuota nella memoria interna.
 
-Il plugin QFieldSync funziona anche dal progetto QField al progetto *Desktop*.
+
 
 .. hint:: Sceglie il Geopackage agli altri formati per i raster affinché il caricamento sia più veloce.
 
@@ -32,23 +32,20 @@ Funzionamento
 
 .. image:: img/qfield_funzionamento_generale.png
 
-..
-    Ordinare le idee
+Il plugin QFieldSync permette il collegamento tra QField e QGIS tramite esportazione / imortazione.
 
-Funzionalità:
+Funzionalità
++++++++++++++++++++++
 
-* Aggiunger un'entità a un layer selezionato
-* Modificare la geometria di un'entità
-* Modificare gli attributi non geografici di un'entità
-* Identificare un'entità
-* Piazzare un punto alla posizione GPS
-* Disegnare una linea o un poligono monitorando la posizione GPS
+* Aggiunta un'entità a un layer selezionato
+* Modifica della geometria e degli attributi non geografici di un'entità
+* Identificazione un'entità (geografica o no)
+* Posizionamento di un punto con il GPS
+* Tracciare linee o poligoni monitorando la posizione GPS
 
 
 Vantaggi e svantaggi
 -----------------------------------
-..
-    TODO: Ordinare le idee
 
 .. raw:: html
 
