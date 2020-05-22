@@ -76,3 +76,10 @@ Vantaggi e svantaggi
         <li>Non esiste per Android</li>
         </ul></td>
     </tr></table>
+
+
+I link utiliti
+----------------------------------
+
+#. https://github.com/roam-qgis/Roam
+#. https://roam-docs.readthedocs.io/en/latest/

@@ -4,7 +4,7 @@ Input
 .. image:: img/logo_input.png
   :align: center
 
-Un GIS mobile app sviluppato da Lutra Consulting (https://inputapp.io/).
+Un GIS mobile app sviluppato da `Lutra Consulting <https://www.lutraconsulting.co.uk/>`__.
 
 
 Installazione
@@ -16,6 +16,14 @@ Installazione
 
 .. note:: È possibile che il plugin sia completamente installato dopo avere riavviare QGIS.
 
+
+Funzionamento
+-------------------------------------
+
+Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincronizzazione dei dati tra QGIS e l'app.
+
+.. image:: img/input_funzionamento_generale.png
+
 * Creare il progetto QGIS con i layers (preferisce il Geopackage), il style, il modulo d'attributi, ...
 
 .. note:: Il sistema di coordinate di riferimento del progetto per usare il GPS deve essere il WGS84/Pseudo-Mercator (EPSG:3857). In caso contrario, la mappa è centrata alle coordinate predefinite, ad esempio al punto (0,0) in WGS84.
@@ -25,15 +33,10 @@ Installazione
 * Mergin va sincronizzando il progetto Mergin con il progetto locale
 * Connettersi all'account sull'applicazione Input
 * Il progetto è disponibile sull'app, nella sezione *I miei progetti*
+* Scaricare il progetto sul telefono.
+* Aprire questo nella *Home page*
 
-
-Funzionamento
--------------------------------------
-
-Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincronizzazione dei dati tra QGIS e l'app.
-
-.. image:: img/input_funzionamento_generale.png
-
+.. note:: Quando c'è una modifica sul telefono o una sincronizzazione sul Desktop, lo statuto cambia nella pagina del progetto (*I miei progetti*, *Condiviso*) con una pittogramma di sincronizzazione.
 
 Funzionalità
 +++++++++++++++++++++
@@ -65,18 +68,22 @@ Vantaggi e svantaggi
         <tr>
         <td><ul>
         <li>Rilievo offline possibile</li>
-        <li>Sincronizzazione veloce tra il rilievo e il progetto Desktop</li>
+        <li>Sincronizzazione abbastanza veloce tra il rilievo e il progetto Desktop e molto veloce senza immagini</li>
         </ul></td>
         <td><ul>
         <li>La modifica dei layers non geografici non è sviluppata</li>
         <li>Il vincolo *not null* non funziona sull'app, tranne i campi auto generati</li>
+        <li>I percorsi degli attaccamenti, per esempio gli immagini, non cambiano dopo sincronizzazione sul computer</li>
         <li>No checkbox (è sostituito da un switch con un text area)</li>
         </ul></td>
     </tr></table>
 
 
-Documentazione
+I link utili
 ------------------------------
 
+#. https://inputapp.io/
 #. https://github.com/lutraconsulting/input/blob/master/docs/users/introduction.md
+#. https://github.com/lutraconsulting/input/blob/master/docs/developers/manual_test_plan.md
 #. https://www.lutraconsulting.co.uk/blog/2020/02/14/survey-qgis-input/
+#. https://public.cloudmergin.com/ 

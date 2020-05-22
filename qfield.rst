@@ -4,7 +4,7 @@ QField
 .. image:: img/logo_qfield.png
   :align: center
 
-Un mobile GIS app con gli obiettivi di accedere ai QGIS strumenti necessari sul terrano (https://qfield.org/).
+Un mobile GIS app con gli obiettivi di accedere ai QGIS strumenti necessari sul terrano.
 
 
 Installazione
@@ -71,3 +71,11 @@ Vantaggi e svantaggi
         <li>Durante la modifica, con il GPS spento, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori <i>Infinity</i> per X e Y.</li>
         </ul></td>
     </tr></table>
+
+
+I link utiliti
+--------------------------------------
+
+#. https://qfield.org/
+#. https://github.com/opengisch/QField/
+#. https://plugins.qgis.org/plugins/qfieldsync/
