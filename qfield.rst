@@ -1,6 +1,9 @@
 QField
 ==================================
 
+.. image:: img/logo_qfield.png
+  :align: center
+
 Un mobile GIS app con gli obiettivi di accedere ai QGIS strumenti necessari sul terrano (https://qfield.org/).
 
 

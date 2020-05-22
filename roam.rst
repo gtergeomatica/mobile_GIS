@@ -1,6 +1,8 @@
 IntraMap
 ==================================
 
+.. image:: img/logo_roam.png
+  :align: center
 
 L'applicazione può essere installata su Windows con un installatore (https://roam-docs.readthedocs.io/en/latest/).
 

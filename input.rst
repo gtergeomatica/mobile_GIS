@@ -1,6 +1,9 @@
 Input
 ==================================
 
+.. image:: img/logo_input.png
+  :align: center
+
 Un GIS mobile app sviluppato da Lutra Consulting (https://inputapp.io/).
 
 
