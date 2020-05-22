@@ -64,7 +64,7 @@ Vantaggi e svantaggi
         <li>Conservazione della personnalizzazione del form, della simbologia di QGIS</li>
         <li>Memoria locale sul telefono - Manovrabilità con il GDPR</li> 
         <li>Conservazione dei vincoli sugli attributi</li>
-        <li>Supporta i relazioni 1->n</li>
+        <li>Supporta i relazioni 1->n quando quando clé primaire parente est visibile</li>
         </ul></td>
         <td><ul>
         <li>Durante la modifica, con il GPS spento, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori <i>Infinity</i> per X e Y.</li>
