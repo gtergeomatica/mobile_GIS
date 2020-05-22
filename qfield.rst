@@ -71,6 +71,6 @@ Vantaggi e svantaggi
         <li>I vincoli degli attributi sono rispettati</li>
         </ul></td>
         <td><ul>
-        <li>Durante la modifica, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori <i>Infinity</i> per X e Y.</li>
+        <li>Durante la modifica, con il GPS spento, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori <i>Infinity</i> per X e Y.</li>
         </ul></td>
     </tr></table>

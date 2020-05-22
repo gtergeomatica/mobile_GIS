@@ -4,7 +4,18 @@ IntraMap
 .. image:: img/logo_roam.png
   :align: center
 
-L'applicazione può essere installata su Windows con un installatore (https://roam-docs.readthedocs.io/en/latest/).
+
+IntraMaps Roam è un colletore di dati, sviluppato su Windows. Oggigiorno, non esiste una versione stabile dell'applicazione, disponibile su Windows e Linux.
+
+
+Installazione
+---------------------------------
+
+L'applicazione può essere installata su Windows con un installatore o un pachetto binario precompilato (https://roam-docs.readthedocs.io/en/latest/).
+
+.. warning:: L'app non funziona con i sistemi Windows RT.
+
+Su Linux, l'app viene eseguita dalla sorgente.
 
 
 Funzionamento
@@ -12,7 +23,7 @@ Funzionamento
 
 * Creare un progetto con **Roam Config Manager.exe**
 * Nel repertory creato da Roam, il repertory **_data** contiene i dati specifi del progetto
-* Aprire il progetto in QGIS tramite l'intefaccia
+* Aprire il progetto in QGIS tramite l'intefaccia di **Roam Config Manager**
 * Aggiungere i layers in QGIS
 * Salvare il progetto in QGIS
 * Nel **Roam Config Manager**, creare un nuovo modulo degli attributi nella sezione *Form*
