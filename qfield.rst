@@ -30,7 +30,7 @@ Funzionamento
 
 .. image:: img/qfield_funzionamento_generale.png
 
-Il plugin QFieldSync permette il collegamento tra QField e QGIS tramite esportazione / imortazione.
+Il plugin QFieldSync permette il collegamento tra QField e QGIS tramite esportazione / importazione.
 
 Funzionalità
 +++++++++++++++++++++
