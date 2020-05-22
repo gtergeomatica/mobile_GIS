@@ -73,7 +73,7 @@ Vantaggi e svantaggi
     </tr></table>
 
 
-I link utiliti
+I link utili
 --------------------------------------
 
 #. https://qfield.org/
