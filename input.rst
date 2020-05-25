@@ -40,6 +40,7 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 * Scaricare il progetto sul telefono.
 
 .. image:: img/input_get_mergin_project.gif
+    :align: center
 
 * Aprire questo nella *Home page*
 

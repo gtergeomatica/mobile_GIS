@@ -37,11 +37,16 @@ Funzionalità
 
 * Aggiunta un'entità a un layer selezionato
 * Modifica della geometria e degli attributi non geografici di un'entità
+
+.. image:: img/qfield_modify_layer.gif
+
 * Identificazione un'entità (geografica o no)
 * Posizionamento di un punto con il GPS
 * Tracciare linee o poligoni monitorando la posizione GPS
+* Navigare nei layers
 
-.. image:: img/qfield_modify_layer.gif
+.. image:: img/qfield_layer_browser.png
+
 
 
 Vantaggi e svantaggi
