@@ -3,6 +3,7 @@ QField
 
 .. image:: img/logo_qfield.png
   :align: center
+  :scale: 150
 
 Un mobile GIS app con gli obiettivi di accedere ai QGIS strumenti necessari sul terrano.
 
@@ -39,8 +40,7 @@ Funzionalità
 * Modifica della geometria e degli attributi non geografici di un'entità
 
 .. image:: img/qfield_modify_layer.gif
-  :align: center
-  :scale: 25
+  :scale: 50
 
 * Identificazione un'entità (geografica o no)
 * Posizionamento di un punto con il GPS
@@ -48,8 +48,7 @@ Funzionalità
 * Navigare nei layers
 
 .. image:: img/qfield_layer_browser.png
-  :align: center
-  :scale: 25
+  :scale: 50
 
 
 Vantaggi e svantaggi
