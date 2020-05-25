@@ -3,6 +3,7 @@ Input
 
 .. image:: img/logo_input.png
   :align: center
+  :scale: 150
 
 Un GIS mobile app sviluppato da `Lutra Consulting <https://www.lutraconsulting.co.uk/>`__.
 
@@ -61,6 +62,9 @@ Funzionalità
 * Posizionamento di un punto con il GPS
 * Tracciare linee o poligoni monitorando la posizione GPS
 
+.. hint:: Selezionare un layer attivo si fatto differamente che su QGIS o QField
+
+.. image:: img/input_get_active_layer.png
 
 
 Vantaggi e svantaggi
