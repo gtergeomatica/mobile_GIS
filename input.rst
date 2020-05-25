@@ -38,9 +38,14 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 * Connettersi all'account sull'applicazione Input
 * Il progetto è disponibile sull'app, nella sezione *I miei progetti*
 * Scaricare il progetto sul telefono.
+
+.. image:: img/get_mergin_project.gif
+
 * Aprire questo nella *Home page*
 
+
 .. note:: Quando c'è una modifica sul telefono o una sincronizzazione sul Desktop, lo statuto cambia nella pagina del progetto (*I miei progetti*, *Condiviso*) con una pittogramma di sincronizzazione.
+
 
 Funzionalità
 +++++++++++++++++++++
