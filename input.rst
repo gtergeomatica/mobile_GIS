@@ -43,7 +43,7 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 .. image:: img/input_get_mergin_project.gif
   :scale: 50
 
-* Aprire questo nella *Home page*
+* Aprire questo nella *Home* page
 
 
 .. note:: Quando c'è una modifica sul telefono o una sincronizzazione sul Desktop, lo statuto cambia nella pagina dell'origine del progetto (*I miei progetti*, *Condivisi*) con una pittogramma di sincronizzazione.
@@ -62,7 +62,7 @@ Funzionalità
 * Posizionamento di un punto con il GPS
 * Tracciare linee o poligoni monitorando la posizione GPS
 
-.. hint:: Selezionare un layer attivo si fatto differamente che su QGIS o QField
+.. hint:: La selezione di un elemento viene eseguita in modo diverso rispetto a QGIS o QField.
 
 .. image:: img/input_get_active_layer.png
 
