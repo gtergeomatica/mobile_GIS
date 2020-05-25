@@ -20,7 +20,7 @@ L'app usa un progetto QGIS esistente. Per vedere ed modificare dati, bisogna di:
 #. Esportare il progetto per l'app con il plugin `QFieldSync <https://plugins.qgis.org/plugins/qfieldsync/>`__
 #. Copiare il progetto QField sul mobile
 
-.. warning:: Il progetto deve essere nel *Internal storage* (non in una scheda SD esterna) per modificare i dati. Deve convertire la scheda *vuota* nella memoria interna.
+.. warning:: Il progetto deve essere nel *Archivio interno* (non in una scheda SD esterna) per modificare i dati. Deve convertire la scheda **vuota** nella memoria interna.
 
 .. hint:: Sceglie il Geopackage agli altri formati affinché il caricamento sia più veloce.
 

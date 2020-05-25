@@ -15,6 +15,10 @@ Nel campo dei sistemi informativo geografico, QGIS è un riferimento dei softwar
         th{
             background-color:#cccccc;
         }
+
+        td{
+            vertical-align: inherit;
+        }
     </style>
     <table style="text-align:center;border: 1px solid #000000;">
         <tr><th>App</th><th>Versione</th><th>Pubblicazione</th><th>Dispositivo di test</th></tr>

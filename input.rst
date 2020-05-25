@@ -29,6 +29,10 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 .. note:: Il sistema di coordinate di riferimento del progetto per usare il GPS deve essere il WGS84/Pseudo-Mercator (EPSG:3857). In caso contrario, la mappa è centrata alle coordinate predefinite, ad esempio al punto (0,0) in WGS84.
 
 * Configurare il plugin nel **Browser panel** con gli impostazioni dell'account
+
+.. image:: img/mergin_plugin_init.JPG
+    :align: center
+
 * Creare un nuovo progetto Mergin (possibilità di creare da un directory locale o un progetto vuoto)
 * Mergin va sincronizzando il progetto Mergin con il progetto locale
 * Connettersi all'account sull'applicazione Input
