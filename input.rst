@@ -41,6 +41,8 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 
 .. image:: img/input_get_mergin_project.gif
     :align: center
+    :width: 300px
+    :height: 546px
 
 * Aprire questo nella *Home page*
 
@@ -56,6 +58,9 @@ Funzionalità
 * Identificazione di un'entità geografica
 
 .. image:: img/input_identify_entity.png
+  :align: center
+  :width: 360px
+  :height: 567px
 
 * Posizionamento di un punto con il GPS
 * Tracciare linee o poligoni monitorando la posizione GPS

@@ -39,6 +39,9 @@ Funzionalità
 * Modifica della geometria e degli attributi non geografici di un'entità
 
 .. image:: img/qfield_modify_layer.gif
+  :align: right
+  :width: 300px
+  :heigth: 479px
 
 * Identificazione un'entità (geografica o no)
 * Posizionamento di un punto con il GPS
