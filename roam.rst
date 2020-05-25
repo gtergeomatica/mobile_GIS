@@ -23,11 +23,17 @@ Funzionamento
 ---------------------------------
 
 * Creare un progetto con **Roam Config Manager.exe**
+
+.. image:: img/roam_config_home.PNG
+
 * Nel repertory creato da Roam, il repertory **_data** contiene i dati specifi del progetto
 * Aprire il progetto in QGIS tramite l'intefaccia di **Roam Config Manager**
 * Aggiungere i layers in QGIS
 * Salvare il progetto in QGIS
-* Nel **Roam Config Manager**, creare un nuovo modulo degli attributi nella sezione *Form*
+* Nel **Roam Config Manager**, creare un nuovo form degli attributi nella sezione *Form*
+
+.. image:: img/roam_form_manager.PNG
+  :scale: 75
 
 .. note:: Il modulo è solamente per i layers geografici
 
@@ -46,9 +52,14 @@ Funzionalità
 * Aggiunta di un'entità a un layer selezionato
 * Modifica della geometria e degli attributi non geografici di un'entità
 * Identificazione un'entità
+
+.. image:: img/roam_main_screen_info.PNG
+  :scale: 75
+
 * Localizzazione GPS e acquisizione della posizione
-* Modulo generato automaticamente
-* Configurazione il pannelli informativi
+* Form generato automaticamente
+* Cercare un'entità secondo determini campi
+* Monitorare la posizione GPS
 
 
 Vantaggi e svantaggi
@@ -72,6 +83,7 @@ Vantaggi e svantaggi
         <td><ul>
         <li>Grande interfaccia</li>
         <li>Personalizzazione del form</li>
+        <li>I vincoli funzionano</li>
         </ul></td>
         <td><ul>
         <li>App ancora in fase di sviluppo</li>

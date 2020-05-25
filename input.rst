@@ -46,7 +46,7 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 * Aprire questo nella *Home page*
 
 
-.. note:: Quando c'è una modifica sul telefono o una sincronizzazione sul Desktop, lo statuto cambia nella pagina del progetto (*I miei progetti*, *Condiviso*) con una pittogramma di sincronizzazione.
+.. note:: Quando c'è una modifica sul telefono o una sincronizzazione sul Desktop, lo statuto cambia nella pagina dell'origine del progetto (*I miei progetti*, *Condivisi*) con una pittogramma di sincronizzazione.
 
 
 Funzionalità

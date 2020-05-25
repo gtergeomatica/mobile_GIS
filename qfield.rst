@@ -45,10 +45,13 @@ Funzionalità
 * Identificazione un'entità (geografica o no)
 * Posizionamento di un punto con il GPS
 * Tracciare linee o poligoni monitorando la posizione GPS
+* Cercare un'entità
 * Navigare nei layers
 
 .. image:: img/qfield_layer_browser.png
   :scale: 50
+
+* Affiggere les logs
 
 
 Vantaggi e svantaggi
