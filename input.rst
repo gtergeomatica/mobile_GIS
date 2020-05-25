@@ -40,9 +40,8 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 * Scaricare il progetto sul telefono.
 
 .. image:: img/input_get_mergin_project.gif
-    :align: center
-    :width: 300px
-    :height: 546px
+  :align: center
+  :scale: 25
 
 * Aprire questo nella *Home page*
 
@@ -59,8 +58,7 @@ Funzionalità
 
 .. image:: img/input_identify_entity.png
   :align: center
-  :width: 360px
-  :height: 567px
+  :scale: 25
 
 * Posizionamento di un punto con il GPS
 * Tracciare linee o poligoni monitorando la posizione GPS
