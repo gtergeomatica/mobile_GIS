@@ -41,6 +41,8 @@ Funzionalità
 * Posizionamento di un punto con il GPS
 * Tracciare linee o poligoni monitorando la posizione GPS
 
+.. image:: img/qfield_modify_layer.gif
+
 
 Vantaggi e svantaggi
 -----------------------------------

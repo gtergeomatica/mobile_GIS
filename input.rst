@@ -39,7 +39,7 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 * Il progetto è disponibile sull'app, nella sezione *I miei progetti*
 * Scaricare il progetto sul telefono.
 
-.. image:: img/get_mergin_project.gif
+.. image:: img/input_get_mergin_project.gif
 
 * Aprire questo nella *Home page*
 
@@ -53,8 +53,12 @@ Funzionalità
 * Aggiunta di un'entità a un layer selezionato
 * Modifica della geometria e degli attributi non geografici di un'entità
 * Identificazione di un'entità geografica
+
+.. image:: img/input_identify_entity.png
+
 * Posizionamento di un punto con il GPS
 * Tracciare linee o poligoni monitorando la posizione GPS
+
 
 
 Vantaggi e svantaggi
