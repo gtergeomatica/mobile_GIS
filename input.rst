@@ -67,6 +67,37 @@ Funzionalità
 .. image:: img/input_get_active_layer.png
 
 
+GPS
+------------------------------------
+
+L'applicazione usa per impostazione predefinita il GPS integrato al telefono. Però, è possibile di cambiare l'applicazione GPS.
+
+Passo 1 : Divenire un sviluppatore
+++++++++++++++++++++++++++++++++++++
+
+.. image:: img/become_dev.gif
+  :scale: 50
+
+* Negli **Impostazioni**, aprire *Info sur telefono* alla fine della pagina.
+* Cliccare tre o sette volte su il *Numero build*. Questo dipende del modello di telefono
+
+Passo 2 : Cambiare l'app di posizione
+++++++++++++++++++++++++++++++++++++++
+
+* Negli **Impostazioni**, aprire la nuova sezione *Opzioni sviluppatore*
+* Nel gruppo *Debug*, selezionare l'opzione *Seleziona app di posizione fittizia*
+* Scegliere l'app connesso al ricevitore GPS esterno
+
+.. image:: img/change_gps_app.gif
+  :scale: 50
+
+Passo 3 : Usare Input
++++++++++++++++++++++++++++++++++++++
+
+.. image:: img/input_w_gps.gif
+  :scale: 50
+
+
 Vantaggi e svantaggi
 ----------------------------------
 

@@ -30,6 +30,7 @@ L'applicazione Roam non interage direttamente con QGIS. Però, il gestore della 
 * Creare un progetto con **Roam Config Manager.exe**
 
 .. image:: img/roam_config_home.PNG
+  :scale: 75
 
 * Nel repertory creato da Roam, il repertory **_data** contiene i dati specifi del progetto
 * Aprire il progetto in QGIS tramite l'intefaccia di **Roam Config Manager**
@@ -68,11 +69,12 @@ Funzionalità
 
 
 GPS
-++++++++++++++++++++++
+------------------------------------
 
-È possibile di collegare un GPS esterno all'applicazione su una **porta seriale** (per esempio, con il connettore RS-232) o con il servizio **gpsd** (per impostazione predefinita alla porta 2947 del TCP). Se l'applicazione è gia apperta, usa la pusanlte *Refresh List* negli opzioni (vede l'immagine sotto) e poi sceglie il GPS collegato.
+È possibile di collegare un GPS esterno all'applicazione su una **porta seriale** (per esempio, con il connettore RS-232) o con il servizio **gpsd** (per impostazione predefinita alla porta TCP 2947). Se l'applicazione è gia apperta, usa la pusanlte *Refresh List* negli opzioni (vede l'immagine sotto) e poi sceglie il GPS collegato.
 
 .. image:: img/roam_options.PNG
+  :scale: 75
 
 
 Vantaggi e svantaggi
@@ -105,6 +107,7 @@ Vantaggi e svantaggi
         </ul></td>
     </tr></table>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""
 
 I link utili
 ----------------------------------
