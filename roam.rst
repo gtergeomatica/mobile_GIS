@@ -1,12 +1,12 @@
 IntraMap Roam
 ==================================
 
-.. image:: img/logo_roam.png
+.. figure:: img/logo_roam.png
   :align: center
   :scale: 150
+  :figclass: align-center
 
-
-IntraMaps Roam è un colletore di dati, sviluppato su Windows. Oggigiorno, non esiste una versione stabile dell'applicazione, disponibile su Windows e Linux.
+  IntraMaps Roam è un colletore di dati, sviluppato su Windows. Oggigiorno, non esiste una versione stabile dell'applicazione, disponibile su Windows e Linux.
 
 
 Installazione

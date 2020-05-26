@@ -1,11 +1,12 @@
 Input
 ==================================
 
-.. image:: img/logo_input.png
+.. figure:: img/logo_input.png
   :align: center
   :scale: 150
+  :figclass: align-center
 
-Un GIS mobile app sviluppato da `Lutra Consulting <https://www.lutraconsulting.co.uk/>`__.
+  Un GIS mobile app sviluppato da `Lutra Consulting <https://www.lutraconsulting.co.uk/>`__.
 
 
 Installazione
@@ -52,8 +53,8 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 Funzionalità
 +++++++++++++++++++++
 
-* Aggiunta di un'entità a un layer selezionato
-* Modifica della geometria e degli attributi non geografici di un'entità
+* Aggiungere un'entità a un layer selezionato
+* Modificare della geometria e degli attributi non geografici di un'entità
 * Identificazione di un'entità geografica
 
 .. image:: img/input_identify_entity.png

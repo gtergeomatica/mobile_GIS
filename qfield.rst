@@ -1,29 +1,28 @@
 QField
 ==================================
 
-.. image:: img/logo_qfield.png
+.. figure:: img/logo_qfield.png
   :align: center
   :scale: 150
+  :figclass: align-center
 
-Un mobile GIS app con gli obiettivi di accedere ai QGIS strumenti necessari sul terrano.
+  Un mobile GIS app con gli obiettivi di accedere ai QGIS strumenti necessari sul terrano.
 
 
 Installazione
 ----------------------------------
 
-QField è un app per Android sistemi. 
-L'ultima versione è disponibile a questo `link <https://github.com/opengisch/QField/releases/>`__ o su Google Play.
+QField è un app per Android sistemi. L'app usa un progetto QGIS *esistente*. Per vedere e modificare dati, bisogna di:
 
-L'app usa un progetto QGIS esistente. Per vedere ed modificare dati, bisogna di:
-
+#. Scarire ultima versione che è disponibile a questo `link <https://github.com/opengisch/QField/releases/>`__ o su Google Play.
 #. Creare il progetto su QGIS Desktop
 #. Creare o aggiungere i layers, i stili, il form, etc...
 #. Esportare il progetto per l'app con il plugin `QFieldSync <https://plugins.qgis.org/plugins/qfieldsync/>`__
 #. Copiare il progetto QField sul mobile
 
-.. warning:: Il progetto deve essere nel *Archivio interno* (non in una scheda SD esterna) per modificare i dati. Deve convertire la scheda **vuota** nella memoria interna.
+.. warning:: Il progetto deve essere nel *Archivio interno* (non in una scheda SD esterna) per modificare i dati. Altrimenti, deve convertire la scheda **vuota** nella memoria interna.
 
-.. hint:: Sceglie il Geopackage agli altri formati affinché il caricamento sia più veloce.
+.. hint:: Sceglie il Geopackage agli altri formati di dati affinché il caricamento sia più veloce.
 
 
 Funzionamento
@@ -36,22 +35,22 @@ Il plugin QFieldSync permette il collegamento tra QField e QGIS tramite esportaz
 Funzionalità
 +++++++++++++++++++++
 
-* Aggiunta un'entità a un layer selezionato
-* Modifica della geometria e degli attributi non geografici di un'entità
+* Aggiungere un'entità a un layer selezionato
+* Modificare della geometria e degli attributi non geografici di un'entità
 
 .. image:: img/qfield_modify_layer.gif
   :scale: 50
 
-* Identificazione un'entità (geografica o no)
+* Identificazione di un'entità (geografica o no con relazioni 1->n)
 * Posizionamento di un punto con il GPS
 * Tracciare linee o poligoni monitorando la posizione GPS
-* Cercare un'entità
-* Navigare nei layers
+* Ricerca di un'entità con i suoi attributi
+* Navigazione nei layers
 
 .. image:: img/qfield_layer_browser.png
   :scale: 50
 
-* Affiggere les logs
+* Visualizzazione dei logs
 
 
 GPS
