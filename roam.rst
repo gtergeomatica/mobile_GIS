@@ -1,4 +1,4 @@
-IntraMap
+IntraMap Roam
 ==================================
 
 .. image:: img/logo_roam.png
@@ -21,6 +21,11 @@ Su Linux, l'app viene eseguita dalla sorgente.
 
 Funzionamento
 ---------------------------------
+
+L'applicazione Roam non interage direttamente con QGIS. Però, il gestore della configurazione comunica con il GIS.
+
+.. image:: img/roam_funzionamento_genereale.png
+
 
 * Creare un progetto con **Roam Config Manager.exe**
 
