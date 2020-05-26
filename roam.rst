@@ -68,9 +68,9 @@ Funzionalità
 
 
 GPS
-++++++++++++++++++++
+++++++++++++++++++++++
 
-È possibile di collegare un GPS esterno all'applicazione su una **porta seriale** (per esempio, il connettore RS-232). Se l'applicazione è gia apperta, usa la pusanlte *Refresh List* negli opzioni (vede l'immagine sotto) e poi sceglie il GPS collegato.
+È possibile di collegare un GPS esterno all'applicazione su una **porta seriale** (per esempio, con il connettore RS-232) o con il servizio **gpsd** (per impostazione predefinita alla porta 2947 del TCP). Se l'applicazione è gia apperta, usa la pusanlte *Refresh List* negli opzioni (vede l'immagine sotto) e poi sceglie il GPS collegato.
 
 .. image:: img/roam_options.PNG
 
