@@ -1,4 +1,4 @@
-IntraMap Roam
+IntraMaps Roam
 ==================================
 
 .. figure:: img/logo_roam.png
@@ -12,11 +12,9 @@ IntraMap Roam
 Installazione
 ---------------------------------
 
-L'applicazione può essere installata su Windows con un installatore o un pachetto binario precompilato (https://roam-docs.readthedocs.io/en/latest/).
+L'applicazione può essere installata su Windows con un installatore o con pachetto binario precompilato (https://roam-docs.readthedocs.io/en/latest/). Su Linux, l'app viene eseguita dal codice sorgente.
 
 .. warning:: L'app non funziona con i sistemi Windows RT.
-
-Su Linux, l'app viene eseguita dalla sorgente.
 
 
 Funzionamento
@@ -44,6 +42,9 @@ L'applicazione Roam non interage direttamente con QGIS. Però, il gestore della 
 .. note:: Il modulo è solamente per i layers geografici
 
 * Nella scheda *Design*, configurare il tipo di campo di riempimento per ogni attributo
+
+.. hint:: È possibile di aggiungere tutti i campi del layer nel form automaticamente. Premere la piccola freccia a destra di *Add Attribute*
+
 * Salvare il progetto e aprire **Roam.exe**
 * Caricare lo da l'elenco dei progetti
 

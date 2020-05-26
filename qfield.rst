@@ -14,7 +14,7 @@ Installazione
 
 QField è un app per Android sistemi. L'app usa un progetto QGIS *esistente*. Per vedere e modificare dati, bisogna di:
 
-#. Scarire ultima versione che è disponibile a questo `link <https://github.com/opengisch/QField/releases/>`__ o su Google Play.
+#. Scarire l'ultima versione che è disponibile a questo `link <https://github.com/opengisch/QField/releases/>`__ o su Google Play.
 #. Creare il progetto su QGIS Desktop
 #. Creare o aggiungere i layers, i stili, il form, etc...
 #. Esportare il progetto per l'app con il plugin `QFieldSync <https://plugins.qgis.org/plugins/qfieldsync/>`__
@@ -35,7 +35,7 @@ Il plugin QFieldSync permette il collegamento tra QField e QGIS tramite esportaz
 Funzionalità
 +++++++++++++++++++++
 
-* Aggiungere un'entità a un layer selezionato
+* Aggiungere un'entità ad un layer selezionato
 * Modificare della geometria e degli attributi non geografici di un'entità
 
 .. image:: img/qfield_modify_layer.gif
@@ -56,7 +56,7 @@ Funzionalità
 GPS
 ------------------------------------
 
-L'applicazione usa per impostazione predefinita il GPS integrato al telefono. Però, è possibile di cambiare l'applicazione GPS.
+L'applicazione usa per impostazione predefinita il GPS integrato al telefono. Però, è possibile di cambiare l'applicazione GPS del suo telefono.
 
 Passo 1 : Divendere un sviluppatore
 ++++++++++++++++++++++++++++++++++++
@@ -103,10 +103,10 @@ Vantaggi e svantaggi
         <tr style="text-align:center;"><th>Vantaggi</th><th>Svantaggi</th></tr>
         <tr>
         <td><ul>
-        <li>Conservazione della personnalizzazione del form, della simbologia di QGIS</li>
+        <li>Conservazione della personalizzazione del form, della simbologia di QGIS</li>
         <li>Memoria locale sul telefono - Manovrabilità con il GDPR</li> 
         <li>Conservazione dei vincoli sugli attributi</li>
-        <li>Supporta i relazioni 1->n quando quando clé primaire parente est visibile</li>
+        <li>Supporta i relazioni 1->n quando la chieve primaria principale è visibile</li>
         </ul></td>
         <td><ul>
         <li>Durante la modifica, con il GPS spento, la disattivazione della visualizzazione delle coordinate tieniti sullo schermo i valori <i>Infinity</i> per X e Y.</li>

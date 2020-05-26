@@ -13,10 +13,10 @@ Installazione
 ----------------------------------
 
 * Creare un account su https://public.cloudmergin.com/ (il account gratuito dà diritto a 100 MB di spazio di archiviazione)
-* Scaricare l'applicazione sul mobile
+* Scaricare l'applicazione sul mobile, disponibile su Google Play e App Store
 * Installare il plugin mergin dal QGIS public repertory su QGIS Desktop
 
-.. note:: È possibile che il plugin sia completamente installato dopo avere riavviare QGIS.
+.. note:: È possibile che il plugin sia completamente installato dopo avere riavviare QGIS. Il plugin è utilizzabile solamente dal **Browser panel**
 
 
 Funzionamento
@@ -26,9 +26,9 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 
 .. image:: img/input_funzionamento_generale.png
 
-* Creare il progetto QGIS con i layers (preferisce il Geopackage), il style, il modulo d'attributi, ...
+* Creare il progetto QGIS con i layers (preferisce il Geopackage), i stili, il form, ...
 
-.. note:: Il sistema di coordinate di riferimento del progetto per usare il GPS deve essere il WGS84/Pseudo-Mercator (EPSG:3857). In caso contrario, la mappa è centrata alle coordinate predefinite, ad esempio al punto (0,0) in WGS84.
+.. note:: Il sistema di coordinate di riferimento del progetto per usare il GPS deve essere il WGS84/Pseudo-Mercator (EPSG:3857). In caso contrario, la mappa è centrata alle coordinate predefinite, ad esempio al punto (0,0) nel sistema WGS84 (EPSG:4326).
 
 * Configurare il plugin nel **Browser panel** con gli impostazioni dell'account
 
@@ -44,8 +44,7 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 .. image:: img/input_get_mergin_project.gif
   :scale: 50
 
-* Aprire questo nella *Home* page
-
+* Aprire questo progetto nel *Home* page
 
 .. note:: Quando c'è una modifica sul telefono o una sincronizzazione sul Desktop, lo statuto cambia nella pagina dell'origine del progetto (*I miei progetti*, *Condivisi*) con una pittogramma di sincronizzazione.
 
@@ -53,7 +52,7 @@ Input pertanto utiliza il servizio d'archiviazione Cloud, Mergin, per la sincron
 Funzionalità
 +++++++++++++++++++++
 
-* Aggiungere un'entità a un layer selezionato
+* Aggiungere un'entità ad un layer selezionato
 * Modificare della geometria e degli attributi non geografici di un'entità
 * Identificazione di un'entità geografica
 
@@ -63,7 +62,7 @@ Funzionalità
 * Posizionamento di un punto con il GPS
 * Tracciare linee o poligoni monitorando la posizione GPS
 
-.. hint:: La selezione di un elemento viene eseguita in modo diverso rispetto a QGIS o QField.
+.. hint:: La selezione di un layer viene eseguita in modo diverso rispetto a QGIS o QField.
 
 .. image:: img/input_get_active_layer.png
 
@@ -126,7 +125,7 @@ Vantaggi e svantaggi
         <li>Non supporta i relazioni 1->n</li>
         <li>La modifica dei layers non geografici non è sviluppata</li>
         <li>I percorsi degli attaccamenti, per esempio gli immagini, non cambiano dopo sincronizzazione sul computer</li>
-        <li>No checkbox (è sostituito da un switch con un text area)</li>
+        <li>No checkbox (è sostituito da un switch e un text area con il valore scelto)</li>
         </ul></td>
     </tr></table>
 
