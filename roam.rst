@@ -67,6 +67,14 @@ Funzionalità
 * Monitorare la posizione GPS
 
 
+GPS
+++++++++++++++++++++
+
+È possibile di collegare un GPS esterno all'applicazione su una **porta seriale** (per esempio, il connettore RS-232). Se l'applicazione è gia apperta, usa la pusanlte *Refresh List* negli opzioni (vede l'immagine sotto) e poi sceglie il GPS collegato.
+
+.. image:: img/roam_options.PNG
+
+
 Vantaggi e svantaggi
 ----------------------------------
 
@@ -93,6 +101,7 @@ Vantaggi e svantaggi
         <td><ul>
         <li>App ancora in fase di sviluppo</li>
         <li>Non esiste per Android</li>
+        <li>Nome del campo e non l'alias nel pannello informativo</li>
         </ul></td>
     </tr></table>
 
