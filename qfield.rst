@@ -58,7 +58,7 @@ GPS
 
 L'applicazione usa per impostazione predefinita il GPS integrato al telefono. Però, è possibile di cambiare l'applicazione GPS del suo telefono.
 
-Passo 1 : Divendere un sviluppatore
+Passo 1 : Divenire un sviluppatore
 ++++++++++++++++++++++++++++++++++++
 
 .. image:: img/become_dev.gif
