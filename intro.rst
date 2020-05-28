@@ -42,7 +42,7 @@ Nel campo dei sistemi informativo geografico, QGIS è un riferimento dei softwar
 Glossario
 ----------------------------
 
-* EPSG : European Petroleum Survey Group
+* EPSG : European Petroleum Survey Group (https://epsg.io/)
 * GDPR : General Data Protection Regulation (https://gdpr-info.eu/)
 * GIS : Geographic Information System
 * GPS : Global Positioning System
