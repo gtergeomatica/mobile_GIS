@@ -1,6 +1,17 @@
 Introduzione
 ==================
  
+Credits
+-----------------------------
+
+.. image:: img/Gter.png
+
+https://gter.it/
+
+
+Scopo
+----------------------------
+
 Nel campo dei sistemi informativo geografico, QGIS è un riferimento dei software Open-source. Però, riguardo al lavoro nel campo, esiste anche Open-source app che interagono con QGIS. Queste pagine hanno gli obiettivi di paragonare tra tre mobile app che usano QGIS : **QField**, **Input** et **IntraMaps Roam**.
 
 
@@ -27,11 +38,4 @@ Nel campo dei sistemi informativo geografico, QGIS è un riferimento dei softwar
         <tr><td><div><img src="_images/logo_roam.png"> IntraMaps Roam</div></td><td>Roam 3 - Beta 3</td><td>2 Aprile 2020</td><td>Windows 10</td></tr>
         </table>
 
-"""""""""""""""""""""""""""""
 
-Credits
------------------------------
-
-.. image:: img/Gter.png
-
-https://gter.it/
